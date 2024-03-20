@@ -1,0 +1,21 @@
+﻿<Window x:Class="Platformy_Projekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Platformy_Projekt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="1200">
+    <Grid>
+        <Grid Margin="0,0,1025,0" Background="#FFE6AEAE">
+            <Button x:Name="employeesBtn" Content="Employees" Margin="0,98,0,481" Background="{x:Null}" FontWeight="Normal" FontFamily="Yu Gothic UI" FontSize="16" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontStyle="Normal" Click="employeesBtn_Click"/>
+            <Button x:Name="messagesBtn" Content="Messages" Margin="0,158,0,421" FontFamily="Yu Gothic UI" FontSize="16"/>
+            <Button x:Name="tasksBtn" Content="Tasks" Margin="0,218,0,361" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0"/>
+            <Button x:Name="logoutBtn" Content="Log out" Margin="0,569,0,10"/>
+        </Grid>
+        <ToolBarPanel>
+            <DataGrid x:Name="usersGrid" Height="120" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" Margin="-200,75,0,0"/>
+        </ToolBarPanel>
+
+    </Grid>
+</Window>
