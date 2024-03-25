@@ -13,9 +13,7 @@
             <Button x:Name="tasksBtn" Content="Tasks" Margin="0,218,0,361" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0"/>
             <Button x:Name="logoutBtn" Content="Log out" Margin="0,569,0,10"/>
         </Grid>
-        <ToolBarPanel>
-            <DataGrid x:Name="usersGrid" Height="120" d:ItemsSource="{d:SampleData ItemCount=5}" HorizontalAlignment="Center" Margin="-200,75,0,0"/>
-        </ToolBarPanel>
+        <Grid x:Name="contentGrid" Margin="220,40,40,40"/>
 
     </Grid>
 </Window>

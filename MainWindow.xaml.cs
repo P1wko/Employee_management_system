@@ -27,13 +27,17 @@ namespace Platformy_Projekt
         public MainWindow()
         {
             InitializeComponent();
-
-
-            
         }
 
         private void employeesBtn_Click(object sender, RoutedEventArgs e)
         {
+            DataGrid usersGrid = new DataGrid();
+            contentGrid.Children.Add(usersGrid);
+            usersGrid.Margin = new Thickness(0, 0, 0, 0);
+            usersGrid.GridLinesVisibility = DataGridGridLinesVisibility.None;
+            usersGrid.IsReadOnly = true;
+            usersGrid.AutoGenerateColumns = true;
+
             MySqlConnection connection = new MySqlConnection(connectionString);
             try
             {
@@ -46,10 +50,17 @@ namespace Platformy_Projekt
 
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
                 DataTable dt = new DataTable("users");
-                dataAdapter.Fill(dt);
-                usersGrid.ItemsSource = dt.DefaultView;
-                dataAdapter.Update(dt);
 
+                dataAdapter.Fill(dt);
+
+                dt.Columns[0].ColumnName = "ID";
+                dt.Columns[1].ColumnName = "Name";
+                dt.Columns[2].ColumnName = "Surname";
+                dt.Columns[3].ColumnName = "Salary";
+
+                usersGrid.ItemsSource = dt.DefaultView;
+                
+                dataAdapter.Update(dt);
                 connection.Close();
             } catch (Exception ex)
             {
