@@ -24,7 +24,7 @@ namespace Platformy_Projekt
     public partial class MainWindow : Window
     {
         //string connectionString = "SERVER=sql11.freemysqlhosting.net;DATABASE=sql11692625;UID=sql11692625;PASSWORD=RA3KJ7Ehva;";
-        string connectionString = "SERVER=127.0.0.1;DATABASE=ems;UID=root;PASSWORD=admin;";
+        string connectionString;
         public MainWindow()
         {
             InitializeComponent();
@@ -99,6 +99,7 @@ namespace Platformy_Projekt
 
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
+            connectionString ="SERVER="+ dbSrvAddress.Text +";DATABASE=" + dbSrvName.Text +";UID=" + dbSrvLogin.Text + ";PASSWORD=" + dbSrvPasswd.Text + ";";
             MySqlConnection connection = new MySqlConnection(connectionString);
             try
             {
@@ -125,6 +126,10 @@ namespace Platformy_Projekt
                     logoutBtn.IsEnabled = true;
                     timerBtn.IsEnabled = true;
                     MessageBox.Show("dobrze");
+                }
+                else
+                {
+                    MessageBox.Show("Błędne dane logowania");
                 }
 
 

@@ -19,13 +19,13 @@
             <Button x:Name="timerBtn" Content="Timer" Margin="0,41,0,301" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0" Grid.Row="1" IsEnabled="False"/>
         </Grid>
         <Grid x:Name="contentGrid" Margin="220,40,40,40">
-            <TextBox x:Name="login" HorizontalAlignment="Left" Margin="281,215,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="passwd" HorizontalAlignment="Left" Margin="281,238,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="login" HorizontalAlignment="Left" Margin="281,215,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="passwd" HorizontalAlignment="Left" Margin="281,238,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
             <Button x:Name="loginBtn" Content="Button" HorizontalAlignment="Left" Margin="448,265,0,0" VerticalAlignment="Top" Height="47" Width="111" Click="loginBtn_Click"/>
-            <TextBox x:Name="dbSrvAddress" HorizontalAlignment="Left" Margin="281,261,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="dbSrvLogin" HorizontalAlignment="Left" Margin="281,307,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="dbSrvPasswd" HorizontalAlignment="Left" Margin="281,330,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="dbSrvName" HorizontalAlignment="Left" Margin="281,284,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="dbSrvAddress" HorizontalAlignment="Left" Margin="281,261,0,0" TextWrapping="Wrap" Text="Database server" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="dbSrvLogin" HorizontalAlignment="Left" Margin="281,307,0,0" TextWrapping="Wrap" Text="Database user" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="dbSrvPasswd" HorizontalAlignment="Left" Margin="281,330,0,0" TextWrapping="Wrap" Text="Database password" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="dbSrvName" HorizontalAlignment="Left" Margin="281,284,0,0" TextWrapping="Wrap" Text="Database name" VerticalAlignment="Top" Width="120"/>
         </Grid>
 
     </Grid>
