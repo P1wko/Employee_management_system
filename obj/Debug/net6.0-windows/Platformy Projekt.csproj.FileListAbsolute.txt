@@ -155,3 +155,4 @@ C:\Users\admin\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-wind
 C:\Users\admin\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\Platformy Projekt.pdb
 C:\Users\admin\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\Platformy Projekt.genruntimeconfig.cache
 C:\Users\admin\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\ref\Platformy Projekt.dll
+F:\Michal\Projekt\Employee_management_system\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

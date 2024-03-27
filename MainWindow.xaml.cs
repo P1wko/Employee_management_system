@@ -15,19 +15,25 @@ using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using System.Data;
 using System.Reflection;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Platformy_Projekt
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        //string connectionString = "SERVER=sql11.freemysqlhosting.net;DATABASE=sql11692625;UID=sql11692625;PASSWORD=RA3KJ7Ehva;";
-        string connectionString;
+
+        DatabaseData? databaseConn;
+        string? connectionString;
         public MainWindow()
         {
             InitializeComponent();
+
+            databaseConn = getDatabaseData();
+            if(databaseConn != null)
+            {
+                connectionString = "SERVER=" + databaseConn.Address + ";DATABASE=" + databaseConn.Name + ";UID=" + databaseConn.Login + ";PASSWORD=" + databaseConn.Password + ";";
+            }
         }
 
         private void employeesBtn_Click(object sender, RoutedEventArgs e)
@@ -99,7 +105,7 @@ namespace Platformy_Projekt
 
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
-            connectionString ="SERVER="+ dbSrvAddress.Text +";DATABASE=" + dbSrvName.Text +";UID=" + dbSrvLogin.Text + ";PASSWORD=" + dbSrvPasswd.Text + ";";
+            //connectionString ="SERVER="+ dbSrvAddress.Text +";DATABASE=" + dbSrvName.Text +";UID=" + dbSrvLogin.Text + ";PASSWORD=" + dbSrvPasswd.Text + ";";
             MySqlConnection connection = new MySqlConnection(connectionString);
             try
             {
@@ -138,5 +144,31 @@ namespace Platformy_Projekt
                 MessageBox.Show("Błędne dane logowania");
             }
         }
+
+        static private DatabaseData? getDatabaseData()
+        {
+            string jsonFile = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.json");
+            DatabaseData? databaseData = new DatabaseData();
+            try
+            {
+                string jsonContent = File.ReadAllText(jsonFile);
+                databaseData = JsonConvert.DeserializeObject<DatabaseData>(jsonContent);
+
+            } catch (Exception e)
+            {
+                //MessageBox.Show("Problem with reading from 'config.json' file");
+                MessageBox.Show(e.Message);
+            }
+            return databaseData;
+        }
     }
+
+    public class DatabaseData
+    {
+        public string Address { get; set; }
+        public string Name { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+    }
+
 }
