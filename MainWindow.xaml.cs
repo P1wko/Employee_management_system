@@ -22,7 +22,7 @@ namespace Platformy_Projekt
 {
     public partial class MainWindow : Window
     {
-
+        Boolean isAuthed = false;
         DatabaseData? databaseConn;
         string? connectionString;
         public MainWindow()
@@ -105,7 +105,6 @@ namespace Platformy_Projekt
 
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
-            //connectionString ="SERVER="+ dbSrvAddress.Text +";DATABASE=" + dbSrvName.Text +";UID=" + dbSrvLogin.Text + ";PASSWORD=" + dbSrvPasswd.Text + ";";
             MySqlConnection connection = new MySqlConnection(connectionString);
             try
             {
@@ -119,11 +118,6 @@ namespace Platformy_Projekt
                 DataTable dt = new DataTable("siema");
                 dataAdapter.Fill(dt);
 
-                //DataGrid loginy = new DataGrid();
-                //contentGrid.Children.Add(loginy);
-                //loginy.AutoGenerateColumns = true;
-                //loginy.ItemsSource = dt.DefaultView;
-
                 if (pswd == dt.Rows[0]["password"].ToString())
                 {
                     employeesBtn.IsEnabled = true;
@@ -131,14 +125,15 @@ namespace Platformy_Projekt
                     messagesBtn.IsEnabled = true;
                     logoutBtn.IsEnabled = true;
                     timerBtn.IsEnabled = true;
-                    MessageBox.Show("dobrze");
+                    isAuthed = true;
+                    MessageBox.Show("Zalogowano poprawnie");
+
                 }
                 else
                 {
                     MessageBox.Show("Błędne dane logowania");
                 }
-
-
+                contentGrid.Children.Clear();
             } catch (Exception ex)
             {
                 MessageBox.Show("Błędne dane logowania");
@@ -156,7 +151,6 @@ namespace Platformy_Projekt
 
             } catch (Exception e)
             {
-                //MessageBox.Show("Problem with reading from 'config.json' file");
                 MessageBox.Show(e.Message);
             }
             return databaseData;
