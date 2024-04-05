@@ -7,7 +7,45 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="EmployeesControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LogInControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MessagesControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Schedule.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TasksControll.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TimerControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="EmployeesControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LogInControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MessagesControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Schedule.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TasksControll.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TimerControl.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

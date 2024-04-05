@@ -197,3 +197,15 @@ E:\Projekt\Employee_management_system\obj\Debug\net6.0-windows\Platformy Projekt
 E:\Projekt\Employee_management_system\obj\Debug\net6.0-windows\ref\Platformy Projekt.dll
 E:\Projekt\Employee_management_system\obj\Debug\net6.0-windows\Platformy Projekt.sourcelink.json
 E:\Projekt\Employee_management_system\obj\Debug\net6.0-windows\Platform.0E3312A3.Up2Date
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\EmployeesControl.g.cs
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\EmployeesControl.baml
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\LogInControl.g.cs
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\LogInControl.baml
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\MessagesControl.g.cs
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\Schedule.g.cs
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\TasksControll.g.cs
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\TimerControl.g.cs
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\MessagesControl.baml
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\TimerControl.baml
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\TasksControll.baml
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\Schedule.baml

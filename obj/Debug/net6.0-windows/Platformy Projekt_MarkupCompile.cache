@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Projekt\Employee_management_system\obj\Debug\net6.0-windows\
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\
 Platformy_Projekt
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-E:\Projekt\Employee_management_system\App.xaml
-11407045341
+F:\Michal\Projekt\Employee_management_system\App.xaml
+71772103017
 
-3-1233169557
-203-1312179437
-MainWindow.xaml;
+10140912656
+2031734666788
+EmployeesControl.xaml;LogInControl.xaml;MainWindow.xaml;MessagesControl.xaml;Schedule.xaml;TasksControll.xaml;TimerControl.xaml;
 
 False
 

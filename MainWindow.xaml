@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformy_Projekt"
         mc:Ignorable="d"
+        Closing="MainWindow_OnClosing_"
         Title="EMS" Height="650" Width="1200" Icon="/pobrane.jpg">
     <Grid>
         <Grid Margin="0,0,1025,0" Background="#FFE6AEAE">
@@ -17,14 +18,11 @@
             <Button x:Name="tasksBtn" Content="Tasks" Margin="0,218,0,361" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0" Grid.RowSpan="2" IsEnabled="False"/>
             <Button x:Name="logoutBtn" Content="Log out" Margin="0,332,0,10" Grid.Row="1" IsEnabled="False"/>
             <Button x:Name="timerBtn" Content="Timer" Margin="0,41,0,301" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0" Grid.Row="1" IsEnabled="False"/>
+            <Button x:Name="scheduleBtn" Content="Schedule" Margin="0,101,0,241" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0" Grid.Row="1" IsEnabled="False"/>
         </Grid>
-        <Grid x:Name="contentGrid" Margin="220,40,40,40">
-            <TextBox x:Name="login" HorizontalAlignment="Left" Margin="281,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="passwd" HorizontalAlignment="Left" Margin="281,294,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="loginBtn" Content="Log in" HorizontalAlignment="Left" Margin="448,265,0,0" VerticalAlignment="Top" Height="47" Width="111" Click="loginBtn_Click"/>
-            <Label Content="Password" HorizontalAlignment="Left" Margin="218,290,0,0" VerticalAlignment="Top"/>
-            <Label Content="Login" HorizontalAlignment="Left" Margin="218,261,0,0" VerticalAlignment="Top"/>
-        </Grid>
+        <ContentControl x:Name="contentGrid" Margin="220,40,40,40">
+            
+        </ContentControl>
 
     </Grid>
 </Window>
