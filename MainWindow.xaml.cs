@@ -43,7 +43,9 @@ namespace Platformy_Projekt
             timerBtn.IsEnabled = true;
             scheduleBtn.IsEnabled = true;
             logoutBtn.IsEnabled = true;
+            isAuthed = true;
 
+            contentGrid.Content = null;
         }
 
         private void employeesBtn_Click(object sender, RoutedEventArgs e)
@@ -55,6 +57,19 @@ namespace Platformy_Projekt
         private void MainWindow_OnClosing_(object? sender, CancelEventArgs e)
         {
             DatabaseConnection.ConnectionClose();
+        }
+
+        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            employeesBtn.IsEnabled = false;
+            messagesBtn.IsEnabled = false;
+            tasksBtn.IsEnabled = false;
+            timerBtn.IsEnabled = false;
+            scheduleBtn.IsEnabled = false;
+            logoutBtn.IsEnabled = false;
+            isAuthed = false;
+
+            contentGrid.Content = logInControl;
         }
     }
 

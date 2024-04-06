@@ -16,13 +16,14 @@
             <Button x:Name="employeesBtn" Content="Employees" Margin="0,98,0,84" Background="{x:Null}" FontWeight="Normal" FontFamily="Yu Gothic UI" FontSize="16" FontStyle="Normal" Click="employeesBtn_Click" IsEnabled="False"/>
             <Button x:Name="messagesBtn" Content="Messages" Margin="0,158,0,24" FontFamily="Yu Gothic UI" FontSize="16" IsEnabled="False"/>
             <Button x:Name="tasksBtn" Content="Tasks" Margin="0,218,0,361" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0" Grid.RowSpan="2" IsEnabled="False"/>
-            <Button x:Name="logoutBtn" Content="Log out" Margin="0,332,0,10" Grid.Row="1" IsEnabled="False"/>
+            <Button x:Name="logoutBtn" Content="Log out" Margin="0,332,0,10" Grid.Row="1" IsEnabled="False" Click="logoutBtn_Click"/>
             <Button x:Name="timerBtn" Content="Timer" Margin="0,41,0,301" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0" Grid.Row="1" IsEnabled="False"/>
             <Button x:Name="scheduleBtn" Content="Schedule" Margin="0,101,0,241" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0" Grid.Row="1" IsEnabled="False"/>
         </Grid>
         <ContentControl x:Name="contentGrid" Margin="220,40,40,40">
             
         </ContentControl>
+        <Grid/>
 
     </Grid>
 </Window>

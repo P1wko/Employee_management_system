@@ -47,6 +47,8 @@ namespace Platformy_Projekt
                 {
                     MessageBox.Show("Zalogowano poprawnie");
                     UserLoggedIn.Invoke(this, EventArgs.Empty);
+                    login.Text = "";
+                    passwd.Password = "";
                 }
                 else
                 {
