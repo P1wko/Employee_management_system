@@ -22,9 +22,8 @@ namespace Platformy_Projekt
     /// </summary>
     public partial class LogInControl : UserControl
     {
-        public event EventHandler UserLoggedIn;
-        DatabaseData? databaseConn;
-        string? connectionString;
+        public delegate void UserLoggeInHandler(int id, string? name, string? surname, string? login, int perms);
+        public event UserLoggeInHandler UserLoggedIn;
         public LogInControl()
         {
             InitializeComponent();
@@ -45,10 +44,14 @@ namespace Platformy_Projekt
 
                 if (pswd == dt.Rows[0]["password"].ToString())
                 {
-                    MessageBox.Show("Zalogowano poprawnie");
-                    UserLoggedIn.Invoke(this, EventArgs.Empty);
+                    int id = Convert.ToInt16(dt.Rows[0]["id"].ToString());
+                    int perms = Convert.ToInt16(dt.Rows[0]["permissions"].ToString());
+                    UserLoggedIn.Invoke(id, dt.Rows[0]["name"].ToString(), dt.Rows[0]["surname"].ToString(), dt.Rows[0]["surname"].ToString(), perms);
+
                     login.Text = "";
                     passwd.Password = "";
+
+                    MessageBox.Show("Zalogowano poprawnie");
                 }
                 else
                 {

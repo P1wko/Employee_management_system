@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using System.IO;
+using Org.BouncyCastle.Bcpg.Sig;
 
 namespace Platformy_Projekt
 {
@@ -25,12 +26,9 @@ namespace Platformy_Projekt
         public static void GetConnection()
         {
             DatabaseData databaseConn = GetDatabaseData();
-            if (databaseConn != null)
-            {
-                string connectionString = "SERVER=" + databaseConn.Address + ";DATABASE=" + databaseConn.Name + ";UID=" + databaseConn.Login + ";PASSWORD=" + databaseConn.Password + ";";
-                Connection = new MySqlConnection(connectionString);
-                Connection.Open();
-            }
+            string connectionString = $"SERVER={databaseConn.Address};DATABASE={databaseConn.Name};UID={databaseConn.Login};PASSWORD={databaseConn.Password};";
+            Connection = new MySqlConnection(connectionString);
+            Connection.Open();
         }
 
         public static void ConnectionClose()
@@ -53,6 +51,24 @@ namespace Platformy_Projekt
                 MessageBox.Show(e.Message);
             }
             return databaseData;
+        }
+    }
+
+    public class LoggedUser
+    {
+        public int Id { get; set; }
+        public string? UserName { get; set; }
+        public string? Name { get; set; }
+        public string? Surname { get; set; }
+        public int Permissions { get; set; }
+
+        public LoggedUser(int id, string? userName, string? name, string? surname, int permissions)
+        {
+            Id = id;
+            UserName = userName;
+            Name = name;
+            Surname = surname;
+            Permissions = permissions;
         }
     }
 }

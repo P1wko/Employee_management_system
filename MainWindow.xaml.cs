@@ -23,8 +23,8 @@ namespace Platformy_Projekt
 {
     public partial class MainWindow : Window
     {
-        Boolean isAuthed = false;
         LogInControl logInControl = new LogInControl();
+        private LoggedUser loggedUser;
         
         public MainWindow()
         {
@@ -35,7 +35,7 @@ namespace Platformy_Projekt
             DatabaseConnection.GetConnection();
         }
 
-        private void userLoggedIn(object sender, EventArgs e)
+        private void userLoggedIn(int id, string? name, string? surname, string? login, int perms)
         {
             employeesBtn.IsEnabled = true;
             messagesBtn.IsEnabled = true;
@@ -43,8 +43,8 @@ namespace Platformy_Projekt
             timerBtn.IsEnabled = true;
             scheduleBtn.IsEnabled = true;
             logoutBtn.IsEnabled = true;
-            isAuthed = true;
 
+            loggedUser = new LoggedUser(id, login, name, surname, perms);
             contentGrid.Content = null;
         }
 
@@ -67,7 +67,6 @@ namespace Platformy_Projekt
             timerBtn.IsEnabled = false;
             scheduleBtn.IsEnabled = false;
             logoutBtn.IsEnabled = false;
-            isAuthed = false;
 
             contentGrid.Content = logInControl;
         }
