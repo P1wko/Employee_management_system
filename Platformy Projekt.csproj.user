@@ -16,7 +16,7 @@
     <Compile Update="MessagesControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Schedule.xaml.cs">
+    <Compile Update="ScheduleControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="TasksControll.xaml.cs">
@@ -39,7 +39,7 @@
     <Page Update="MessagesControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Schedule.xaml">
+    <Page Update="ScheduleControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TasksControll.xaml">

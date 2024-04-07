@@ -22,7 +22,7 @@ namespace Platformy_Projekt
     /// </summary>
     public partial class LogInControl : UserControl
     {
-        public delegate void UserLoggeInHandler(int id, string? name, string? surname, string? login, int perms);
+        public delegate void UserLoggeInHandler();
         public event UserLoggeInHandler UserLoggedIn;
         public LogInControl()
         {
@@ -35,7 +35,7 @@ namespace Platformy_Projekt
             {
                 string lgn = login.Text;
                 string pswd = passwd.Password;
-                string query = "SELECT * FROM users WHERE login='" + lgn + "';";
+                string query = $"SELECT * FROM users WHERE login='{lgn}';";
                 MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                 command.ExecuteNonQuery();
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
@@ -46,10 +46,12 @@ namespace Platformy_Projekt
                 {
                     int id = Convert.ToInt16(dt.Rows[0]["id"].ToString());
                     int perms = Convert.ToInt16(dt.Rows[0]["permissions"].ToString());
-                    UserLoggedIn.Invoke(id, dt.Rows[0]["name"].ToString(), dt.Rows[0]["surname"].ToString(), dt.Rows[0]["surname"].ToString(), perms);
+                    LoggedUser.SetInstance(id, dt.Rows[0]["name"].ToString(), dt.Rows[0]["surname"].ToString(), dt.Rows[0]["surname"].ToString(), perms);
 
-                    login.Text = "";
-                    passwd.Password = "";
+                    UserLoggedIn.Invoke();
+
+                    //login.Text = "";
+                    //passwd.Password = "";
 
                     MessageBox.Show("Zalogowano poprawnie");
                 }

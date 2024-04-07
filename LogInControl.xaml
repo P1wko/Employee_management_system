@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:Platformy_Projekt"
              mc:Ignorable="d" Height="554.04" Width="940">
     <Grid>
-        <TextBox x:Name="login" HorizontalAlignment="Left" Margin="283,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="login" HorizontalAlignment="Left" Margin="283,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="siema"/>
         <Button x:Name="loginBtn" Content="Log in" HorizontalAlignment="Left" Margin="448,265,0,0" VerticalAlignment="Top" Height="47" Width="111" Click="loginBtn_Click"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="218,290,0,0" VerticalAlignment="Top"/>
         <Label Content="Login" HorizontalAlignment="Left" Margin="218,261,0,0" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="passwd" HorizontalAlignment="Left" Margin="283,294,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="passwd" HorizontalAlignment="Left" Margin="283,294,0,0" VerticalAlignment="Top" Width="120" Password="siema"/>
     </Grid>
 </UserControl>

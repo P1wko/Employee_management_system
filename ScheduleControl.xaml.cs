@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Platformy_Projekt
 {
     /// <summary>
-    /// Logika interakcji dla klasy Schedule.xaml
+    /// Logika interakcji dla klasy ScheduleControl.xaml
     /// </summary>
-    public partial class Schedule : UserControl
+    public partial class ScheduleControl : UserControl
     {
-        public Schedule()
+        public ScheduleControl()
         {
             InitializeComponent();
         }

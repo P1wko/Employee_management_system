@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Platformy_Projekt"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid x:Name="contentGrid" VerticalAlignment="Top">
             
     </Grid>
 </UserControl>

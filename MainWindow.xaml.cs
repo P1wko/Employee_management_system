@@ -35,7 +35,7 @@ namespace Platformy_Projekt
             DatabaseConnection.GetConnection();
         }
 
-        private void userLoggedIn(int id, string? name, string? surname, string? login, int perms)
+        private void userLoggedIn()
         {
             employeesBtn.IsEnabled = true;
             messagesBtn.IsEnabled = true;
@@ -44,7 +44,10 @@ namespace Platformy_Projekt
             scheduleBtn.IsEnabled = true;
             logoutBtn.IsEnabled = true;
 
-            loggedUser = new LoggedUser(id, login, name, surname, perms);
+            loggedUser = LoggedUser.GetInstance();
+
+            MessageBox.Show(loggedUser.Surname);
+
             contentGrid.Content = null;
         }
 
@@ -69,6 +72,11 @@ namespace Platformy_Projekt
             logoutBtn.IsEnabled = false;
 
             contentGrid.Content = logInControl;
+        }
+
+        private void messagesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            contentGrid.Content = new MessagesControl();
         }
     }
 

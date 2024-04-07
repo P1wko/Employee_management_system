@@ -202,10 +202,10 @@ F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\EmployeesC
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\LogInControl.g.cs
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\LogInControl.baml
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\MessagesControl.g.cs
-F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\Schedule.g.cs
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\TasksControll.g.cs
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\TimerControl.g.cs
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\MessagesControl.baml
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\TimerControl.baml
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\TasksControll.baml
-F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\Schedule.baml
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\ScheduleControl.g.cs
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\ScheduleControl.baml

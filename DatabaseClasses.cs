@@ -56,19 +56,30 @@ namespace Platformy_Projekt
 
     public class LoggedUser
     {
+        private static LoggedUser instance;
         public int Id { get; set; }
         public string? UserName { get; set; }
         public string? Name { get; set; }
         public string? Surname { get; set; }
         public int Permissions { get; set; }
 
-        public LoggedUser(int id, string? userName, string? name, string? surname, int permissions)
+        private LoggedUser(int id, string? userName, string? name, string? surname, int permissions)
         {
             Id = id;
             UserName = userName;
             Name = name;
             Surname = surname;
             Permissions = permissions;
+        }
+
+        public static void SetInstance(int id, string? userName, string? name, string? surname, int permissions)
+        {
+            instance = new LoggedUser(id, userName, name, surname, permissions);
+        }
+
+        public static LoggedUser GetInstance()
+        {
+                return instance;
         }
     }
 }
