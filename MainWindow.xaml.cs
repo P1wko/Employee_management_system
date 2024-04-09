@@ -78,6 +78,16 @@ namespace Platformy_Projekt
         {
             contentGrid.Content = new MessagesControl();
         }
+
+        private void timerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            contentGrid.Content = new TimerControl();
+        }
+
+        private void scheduleBtn_Click(object sender, RoutedEventArgs e)
+        {
+            contentGrid.Content = new ScheduleControl();
+        }
     }
 
     

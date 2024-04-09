@@ -20,9 +20,39 @@ namespace Platformy_Projekt
     /// </summary>
     public partial class ScheduleControl : UserControl
     {
+        
+
         public ScheduleControl()
         {
             InitializeComponent();
+
+            int dayOfWeek;
+            DateTime today;
+            int days;
+            today = DateTime.Today;
+            DateTime firstOfMonth = new DateTime(today.Year, today.Month, 1);
+            dayOfWeek = (int)firstOfMonth.DayOfWeek-1;
+            days=DateTime.DaysInMonth(today.Year, today.Month);
+
+            int counter = 1;
+            for (int i=0; i<days; i++)
+            {
+                TextBox date = new TextBox();
+                date.Text = $"{i + 1}";
+                date.Name = $"a{i + 1}";
+                Grid.SetColumn(date, dayOfWeek);
+                Grid.SetRow(date, counter);
+                Calendar.Children.Add(date);
+                dayOfWeek += 1;
+                if (dayOfWeek % 7 == 0)
+                {
+                    counter++;
+                    dayOfWeek = 0;
+                }
+
+            }
+
+
         }
     }
 }

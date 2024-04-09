@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Platformy_Projekt
 {
@@ -20,9 +21,33 @@ namespace Platformy_Projekt
     /// </summary>
     public partial class TimerControl : UserControl
     {
+        private DispatcherTimer timer;
+        private TimeSpan elapsedTime;
+        private TimeSpan start;
+
         public TimerControl()
         {
             InitializeComponent();
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Timer_Tick;
+            start = TimeSpan.FromHours(8);
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            start -= elapsedTime.Add(TimeSpan.FromSeconds(1));
+            Time.Text = start.ToString(@"hh\:mm\:ss");
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            timer.Start();
         }
     }
 }

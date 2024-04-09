@@ -5,8 +5,36 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Platformy_Projekt"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             Width="940" Height="554.04">
     <Grid>
-            
+        <Button Content="UPDATE SCHEDULE" HorizontalAlignment="Left" Margin="765,476,0,0" VerticalAlignment="Top" Height="50" Width="139" IsEnabled="False"/>
+        <Grid x:Name="Calendar" Margin="124,33,124,117" Grid.Row="6" Grid.Column="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Monday" VerticalAlignment="Center" Width="99" Height="31" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Wednesday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Tuesday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Thursday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Friday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Saturday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sunday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </Grid>
+
     </Grid>
 </UserControl>
