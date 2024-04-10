@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              Width="940" Height="554.04">
     <Grid>
-        <Button Content="UPDATE SCHEDULE" HorizontalAlignment="Left" Margin="765,476,0,0" VerticalAlignment="Top" Height="50" Width="139" IsEnabled="False"/>
-        <Grid x:Name="Calendar" Margin="124,33,124,117" Grid.Row="6" Grid.Column="7">
+        <Button Content="UPDATE SCHEDULE" HorizontalAlignment="Left" Margin="791,494,0,0" VerticalAlignment="Top" Height="50" Width="139" IsEnabled="False"/>
+        <Grid x:Name="Calendar" Margin="124,67,124,83">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -35,6 +35,7 @@
             <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Saturday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sunday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </Grid>
+        <TextBlock x:Name="Month" Margin="0,10,0,0" TextWrapping="Wrap" Text="January" VerticalAlignment="Top" Height="52" Width="692" FontSize="36" HorizontalAlignment="Center" TextAlignment="Center"/>
 
     </Grid>
 </UserControl>

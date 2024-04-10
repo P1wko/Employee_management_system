@@ -26,6 +26,7 @@ namespace Platformy_Projekt
         {
             InitializeComponent();
 
+            //Month.Text = "XD";
             int dayOfWeek;
             DateTime today;
             int days;
