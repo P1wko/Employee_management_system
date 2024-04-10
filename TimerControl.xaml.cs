@@ -23,31 +23,20 @@ namespace Platformy_Projekt
     {
         private DispatcherTimer timer;
         private TimeSpan elapsedTime;
-        private TimeSpan start;
 
         public TimerControl()
         {
             InitializeComponent();
             timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Interval = TimeSpan.FromMilliseconds(0);
             timer.Tick += Timer_Tick;
-            start = TimeSpan.FromHours(8);
+            timer.Start();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            start -= elapsedTime.Add(TimeSpan.FromSeconds(1));
-            Time.Text = start.ToString(@"hh\:mm\:ss");
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            timer.Start();
+            elapsedTime = elapsedTime.Add(TimeSpan.FromSeconds(1));
+            Time.Text = elapsedTime.ToString(@"hh\:mm\:ss");
         }
     }
 }

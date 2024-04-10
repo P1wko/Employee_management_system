@@ -46,8 +46,6 @@ namespace Platformy_Projekt
 
             loggedUser = LoggedUser.GetInstance();
 
-            MessageBox.Show(loggedUser.Surname);
-
             contentGrid.Content = null;
         }
 
