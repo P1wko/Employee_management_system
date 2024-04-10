@@ -22,21 +22,22 @@ namespace Platformy_Projekt
     public partial class TimerControl : UserControl
     {
         private DispatcherTimer timer;
-        private TimeSpan elapsedTime;
+        private TimeSpan current;
 
         public TimerControl()
         {
             InitializeComponent();
             timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMilliseconds(0);
+            timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_Tick;
+            current = DateTime.Today.AddHours(17) - DateTime.Now;
             timer.Start();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            elapsedTime = elapsedTime.Add(TimeSpan.FromSeconds(1));
-            Time.Text = elapsedTime.ToString(@"hh\:mm\:ss");
+            current = DateTime.Today.AddHours(17) - DateTime.Now + TimeSpan.FromMinutes(1);
+            Time.Text = current.ToString(@"hh\:mm");
         }
     }
 }

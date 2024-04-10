@@ -23,9 +23,14 @@ namespace Platformy_Projekt
 {
     public partial class MainWindow : Window
     {
-        LogInControl logInControl = new LogInControl();
+        private LogInControl logInControl = new LogInControl();
         private LoggedUser loggedUser;
-        
+
+        private TimerControl timeControl;
+        private MessagesControl messagesControl;
+        private ScheduleControl scheduleControl;
+        private EmployeesControl employeesControl;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -46,12 +51,17 @@ namespace Platformy_Projekt
 
             loggedUser = LoggedUser.GetInstance();
 
+            timeControl = new TimerControl();
+            messagesControl = new MessagesControl();
+            scheduleControl = new ScheduleControl();
+            employeesControl = new EmployeesControl();
+
             contentGrid.Content = null;
         }
 
         private void employeesBtn_Click(object sender, RoutedEventArgs e)
         {
-            contentGrid.Content = new EmployeesControl();
+            contentGrid.Content = employeesControl;
         }
 
 
@@ -74,17 +84,17 @@ namespace Platformy_Projekt
 
         private void messagesBtn_Click(object sender, RoutedEventArgs e)
         {
-            contentGrid.Content = new MessagesControl();
+            contentGrid.Content = messagesControl;
         }
 
         private void timerBtn_Click(object sender, RoutedEventArgs e)
         {
-            contentGrid.Content = new TimerControl();
+            contentGrid.Content = timeControl;
         }
 
         private void scheduleBtn_Click(object sender, RoutedEventArgs e)
         {
-            contentGrid.Content = new ScheduleControl();
+            contentGrid.Content = scheduleControl;
         }
     }
 
