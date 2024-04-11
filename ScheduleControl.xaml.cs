@@ -38,9 +38,24 @@ namespace Platformy_Projekt
 
         private void DrawCalendar()
         {
+            DayOfWeek dayLabel = DayOfWeek.Monday;
+            for(int i = 0; i < 7; i++)
+            {
+                TextBox label = new TextBox();
+                label.Text = dayLabel.ToString();
+                Grid.SetColumn(label, i);
+                Grid.SetRow(label, 0);
+                label.IsReadOnly = true;
+                label.TextAlignment = TextAlignment.Center;
+                label.VerticalContentAlignment = VerticalAlignment.Center;
+                Calendar.Children.Add(label);
+                dayLabel = dayLabel < DayOfWeek.Saturday ? dayLabel + 1 : DayOfWeek.Sunday;
+            }
+
             Month.Text = ((Months)today.Month - 1).ToString();
             DateTime firstOfMonth = new DateTime(today.Year, today.Month, 1);
             int dayOfWeek = (int)firstOfMonth.DayOfWeek - 1;
+            if (dayOfWeek < 0) dayOfWeek = 6;
             int days = DateTime.DaysInMonth(today.Year, today.Month);
 
             int counter = 1;
@@ -48,6 +63,7 @@ namespace Platformy_Projekt
             {
                 TextBox date = new TextBox();
                 date.Text = $"{i + 1}";
+                date.Name = $"a{i + 1}";
                 RegisterName($"a{i + 1}", date);
                 Grid.SetColumn(date, dayOfWeek);
                 Grid.SetRow(date, counter);
@@ -106,6 +122,36 @@ namespace Platformy_Projekt
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        private void ButtonR_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var child in Calendar.Children)
+            {
+                if (child is TextBox textBox && !string.IsNullOrEmpty(textBox.Name))
+                {
+                    UnregisterName(textBox.Name);
+                }
+            }
+            Calendar.Children.Clear();
+            today = today.AddMonths(1);
+            DrawCalendar();
+            PaintCalendar();
+        }
+
+        private void ButtonL_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var child in Calendar.Children)
+            {
+                if (child is TextBox textBox && !string.IsNullOrEmpty(textBox.Name))
+                {
+                    UnregisterName(textBox.Name);
+                }
+            }
+            Calendar.Children.Clear();
+            today = today.AddMonths(-1);
+            DrawCalendar();
+            PaintCalendar();
         }
     }
 }

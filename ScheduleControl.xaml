@@ -8,7 +8,7 @@
              Width="940" Height="554.04">
     <Grid>
         <Button Content="UPDATE SCHEDULE" HorizontalAlignment="Center" Margin="0,471,0,0" VerticalAlignment="Top" Height="50" Width="140" IsEnabled="False"/>
-        <Grid x:Name="Calendar" Margin="124,67,124,83">
+        <Grid x:Name="Calendar" Margin="124,52,124,98">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -27,19 +27,14 @@
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Monday" VerticalAlignment="Center" Width="99" Height="31" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Wednesday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Tuesday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Thursday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Friday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Saturday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
-            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="Sunday" VerticalAlignment="Center" Width="99" Height="31" Grid.Column="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
         </Grid>
-        <TextBlock x:Name="Month" Margin="0,10,0,0" TextWrapping="Wrap" Text="January" VerticalAlignment="Top" Height="52" Width="692" FontSize="36" HorizontalAlignment="Center" TextAlignment="Center"/>
+        <TextBlock x:Name="Month" TextWrapping="Wrap" Text="January" VerticalAlignment="Top" Height="52" Width="692" FontSize="36" HorizontalAlignment="Center" TextAlignment="Center"/>
         <TextBox HorizontalAlignment="Left" Margin="566,487,0,0" TextWrapping="Wrap" Text="Morning shift" VerticalAlignment="Top" Width="80" TextAlignment="Center" Background="#FFEBED82" IsReadOnly="True"/>
         <TextBox HorizontalAlignment="Left" Margin="651,487,0,0" TextWrapping="Wrap" Text="Evening shift" VerticalAlignment="Top" Width="80" TextAlignment="Center" Background="#FF7186D9" IsReadOnly="True"/>
         <TextBox HorizontalAlignment="Left" Margin="736,487,0,0" TextWrapping="Wrap" Text="Day off" VerticalAlignment="Top" Width="80" TextAlignment="Center" Background="#FFD971D0" IsReadOnly="True"/>
         <TextBox HorizontalAlignment="Left" Margin="821,487,0,0" TextWrapping="Wrap" Text="No info" VerticalAlignment="Top" Width="80" TextAlignment="Center" Background="#FFB9B9B9" IsReadOnly="True"/>
+        <Button Content="4" VerticalAlignment="Center" Click="ButtonR_Click" Height="40" Margin="0,0,40,0" HorizontalAlignment="Right" Width="40" FontSize="36" FontFamily="Webdings"/>
+        <Button Content="3" VerticalAlignment="Top" Click="ButtonL_Click" Height="40" Margin="40,252,0,0" HorizontalAlignment="Left" Width="40" FontFamily="Webdings" FontSize="36"/>
 
     </Grid>
 </UserControl>

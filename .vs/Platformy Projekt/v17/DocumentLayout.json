@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:schedulecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "ScheduleControl.xaml.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\ScheduleControl.xaml.cs",
               "RelativeToolTip": "ScheduleControl.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAAgAAAA",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAkwJcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-10T11:18:23.571Z",
               "EditorCaption": ""
@@ -55,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -67,13 +67,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAYwFgAAAA4AAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAwFgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-26T17:09:36.96Z",
               "EditorCaption": ""
