@@ -17,9 +17,6 @@ using System.Data;
 
 namespace Platformy_Projekt
 {
-    /// <summary>
-    /// Logika interakcji dla klasy LogInControl.xaml
-    /// </summary>
     public partial class LogInControl : UserControl
     {
         public delegate void UserLoggeInHandler();

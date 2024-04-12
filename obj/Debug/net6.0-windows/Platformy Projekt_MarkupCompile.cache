@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\
 Platformy_Projekt
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\App.xaml
+F:\Michal\Projekt\Employee_management_system\App.xaml
 71213590991
 
 10-2146798504
-2031946688279
+2031734666788
 EmployeesControl.xaml;LogInControl.xaml;MainWindow.xaml;MessagesControl.xaml;ScheduleControl.xaml;TasksControll.xaml;TimerControl.xaml;
 
 False

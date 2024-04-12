@@ -41,38 +41,46 @@ namespace Platformy_Projekt
             DayOfWeek dayLabel = DayOfWeek.Monday;
             for(int i = 0; i < 7; i++)
             {
-                TextBox label = new TextBox();
-                label.Text = dayLabel.ToString();
+                TextBox label = new TextBox
+                {
+                    Text = dayLabel.ToString(),
+                    IsReadOnly = true,
+                    FontFamily = new FontFamily("Yu Gothic UI Light"),
+                    FontWeight = FontWeights.Bold,
+                    Background = new SolidColorBrush(Color.FromRgb(118, 171, 174)),
+                    BorderThickness = new Thickness(0),
+                    TextAlignment = TextAlignment.Center,
+                    VerticalContentAlignment = VerticalAlignment.Center,
+                    Cursor = Cursors.Arrow
+                };
                 Grid.SetColumn(label, i);
                 Grid.SetRow(label, 0);
-                label.IsReadOnly = true;
-                label.FontFamily = new FontFamily("Yu Gothic UI Light");
-                label.FontWeight = FontWeights.Bold;
-                label.Background = new SolidColorBrush(Color.FromRgb(118, 171, 174));
-                label.BorderThickness = new Thickness(0);
-                label.TextAlignment = TextAlignment.Center;
-                label.VerticalContentAlignment = VerticalAlignment.Center;
                 Calendar.Children.Add(label);
                 dayLabel = dayLabel < DayOfWeek.Saturday ? dayLabel + 1 : DayOfWeek.Sunday;
             }
 
-            Month.Text = ((Months)today.Month - 1).ToString();
+            Month.Text = ((Months)today.Month - 1) + " " + (today.Year);
+
             DateTime firstOfMonth = new DateTime(today.Year, today.Month, 1);
             int dayOfWeek = (int)firstOfMonth.DayOfWeek - 1;
             if (dayOfWeek < 0) dayOfWeek = 6;
+
             int days = DateTime.DaysInMonth(today.Year, today.Month);
 
             int counter = 1;
             for (int i = 0; i < days; i++)
             {
-                TextBox date = new TextBox();
-                date.Text = $"{i + 1}";
-                date.Name = $"a{i + 1}";
+                TextBox date = new TextBox
+                {
+                    Text = $"{i + 1}",
+                    Name = $"a{i + 1}",
+                    Background = new SolidColorBrush(Color.FromRgb(185, 185, 185)),
+                    IsReadOnly = true,
+                    Cursor = Cursors.Arrow
+                };
                 RegisterName($"a{i + 1}", date);
                 Grid.SetColumn(date, dayOfWeek);
                 Grid.SetRow(date, counter);
-                date.Background = new SolidColorBrush(Color.FromRgb(185, 185, 185));
-                date.IsReadOnly = true;
                 Calendar.Children.Add(date);
                 dayOfWeek += 1;
                 if (dayOfWeek % 7 == 0)
@@ -138,6 +146,7 @@ namespace Platformy_Projekt
                 }
             }
             Calendar.Children.Clear();
+
             today = today.AddMonths(1);
             DrawCalendar();
             PaintCalendar();
@@ -153,6 +162,7 @@ namespace Platformy_Projekt
                 }
             }
             Calendar.Children.Clear();
+
             today = today.AddMonths(-1);
             DrawCalendar();
             PaintCalendar();

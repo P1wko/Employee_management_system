@@ -52,10 +52,10 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="1" TextWrapping="Wrap" Text="Morning shift" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FFEBED82" IsReadOnly="True"/>
-            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="2" TextWrapping="Wrap" Text="Evening shift" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FF7186D9" IsReadOnly="True"/>
-            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="3" TextWrapping="Wrap" Text="Day off" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FFD971D0" IsReadOnly="True"/>
-            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="4" TextWrapping="Wrap" Text="No info" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FFB9B9B9" IsReadOnly="True"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="1" TextWrapping="Wrap" Text="Morning shift" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FFEBED82" IsReadOnly="True" Cursor="Arrow"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="2" TextWrapping="Wrap" Text="Evening shift" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FF7186D9" IsReadOnly="True" Cursor="Arrow"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="3" TextWrapping="Wrap" Text="Day off" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FFD971D0" IsReadOnly="True" Cursor="Arrow"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="4" TextWrapping="Wrap" Text="No info" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FFB9B9B9" IsReadOnly="True" Cursor="Arrow"/>
             <Button FontFamily="Yu Gothic UI Light" FontWeight="Bold" Content="UPDATE SCHEDULE" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" IsEnabled="False" Height="30" Width="150"/>
         </Grid>
         

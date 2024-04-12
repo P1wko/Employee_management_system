@@ -37,7 +37,15 @@ namespace Platformy_Projekt
         private void Timer_Tick(object sender, EventArgs e)
         {
             current = DateTime.Today.AddHours(17) - DateTime.Now + TimeSpan.FromMinutes(1);
-            Time.Text = current.ToString(@"hh\:mm");
+            if (current.TotalMinutes < 0)
+            {
+                Time.Text = "FAJRANT!";
+                Time.Background = new SolidColorBrush(Colors.Green);
+            }
+            else
+            {
+                Time.Text = current.ToString(@"hh\:mm");
+            }
         }
     }
 }
