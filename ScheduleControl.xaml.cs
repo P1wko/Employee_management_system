@@ -46,6 +46,10 @@ namespace Platformy_Projekt
                 Grid.SetColumn(label, i);
                 Grid.SetRow(label, 0);
                 label.IsReadOnly = true;
+                label.FontFamily = new FontFamily("Yu Gothic UI Light");
+                label.FontWeight = FontWeights.Bold;
+                label.Background = new SolidColorBrush(Color.FromRgb(118, 171, 174));
+                label.BorderThickness = new Thickness(0);
                 label.TextAlignment = TextAlignment.Center;
                 label.VerticalContentAlignment = VerticalAlignment.Center;
                 Calendar.Children.Add(label);

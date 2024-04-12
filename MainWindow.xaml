@@ -5,24 +5,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformy_Projekt"
         mc:Ignorable="d"
-        Closing="MainWindow_OnClosing_"
-        Title="EMS" Height="650" Width="1200" Icon="/pobrane.jpg">
+        Title="EMS" 
+        Height="650" 
+        Width="1200" 
+        Icon="/pobrane.jpg"
+        Closing="MainWindow_OnClosing_">
+    <Window.Resources>
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Yu Gothic UI Light"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="Foreground" Value="Gray"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#31363F"/>
+                                <Setter Property="Foreground" Value="#EEEEEE"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <Grid Margin="0,0,1025,0" Background="#FFE6AEAE">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#76ABAE">
             <Grid.RowDefinitions>
-                <RowDefinition Height="237*"/>
-                <RowDefinition Height="397*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="employeesBtn" Content="Employees" Margin="0,98,0,84" Background="{x:Null}" FontWeight="Normal" FontFamily="Yu Gothic UI" FontSize="16" FontStyle="Normal" Click="employeesBtn_Click" IsEnabled="False"/>
-            <Button x:Name="messagesBtn" Content="Messages" Margin="0,158,0,24" FontFamily="Yu Gothic UI" FontSize="16" IsEnabled="False" Click="messagesBtn_Click"/>
-            <Button x:Name="tasksBtn" Content="Tasks" Margin="0,218,0,361" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0" Grid.RowSpan="2" IsEnabled="False"/>
-            <Button x:Name="logoutBtn" Content="Log out" Margin="0,332,0,10" Grid.Row="1" IsEnabled="False" Click="logoutBtn_Click"/>
-            <Button x:Name="timerBtn" Content="Timer" Margin="0,41,0,301" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0" Grid.Row="1" IsEnabled="False" Click="timerBtn_Click"/>
-            <Button x:Name="scheduleBtn" Content="Schedule" Margin="0,101,0,241" FontSize="16" FontFamily="Yu Gothic UI" Background="#FFEAD0D0" Grid.Row="1" IsEnabled="False" Click="scheduleBtn_Click"/>
+            <Button x:Name="employeesBtn" Content="EMPLOYEES" Grid.Row="1" Click="employeesBtn_Click" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
+            <Button x:Name="messagesBtn" Content="MESSAGES" Grid.Row="2" Click="messagesBtn_Click" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
+            <Button x:Name="tasksBtn" Content="TASKS" Grid.Row="3" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
+            <Button x:Name="scheduleBtn" Content="SCHEDULE" Grid.Row="4" Click="scheduleBtn_Click" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
+            <Button x:Name="timerBtn" Content="TIMER" Grid.Row="5" Click="timerBtn_Click" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
+            <Button x:Name="logoutBtn" Content="LOG OUT" Grid.Row="10" Click="logoutBtn_Click" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
         </Grid>
-        <ContentControl x:Name="contentGrid" Margin="220,40,40,40">
-            
-        </ContentControl>
+        <ContentControl x:Name="contentGrid" Grid.Column="1"/>
+
+
         <Grid/>
 
     </Grid>

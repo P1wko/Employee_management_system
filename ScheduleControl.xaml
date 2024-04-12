@@ -4,37 +4,61 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Platformy_Projekt"
-             mc:Ignorable="d" 
-             Width="940" Height="554.04">
-    <Grid>
-        <Button Content="UPDATE SCHEDULE" HorizontalAlignment="Center" Margin="0,471,0,0" VerticalAlignment="Top" Height="50" Width="140" IsEnabled="False"/>
-        <Grid x:Name="Calendar" Margin="124,52,124,98">
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#EEEEEE">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="Calendar" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <Button Content="4" Grid.Column="2" VerticalAlignment="Center" Background="{x:Null}" BorderThickness="0" Click="ButtonR_Click" Height="40"  HorizontalAlignment="Center" Width="40" FontSize="36" FontFamily="Webdings"/>
+            <Button Content="3" Grid.Column="0" VerticalAlignment="Center" Background="{x:Null}" BorderThickness="0" Click="ButtonL_Click" Height="40"  HorizontalAlignment="Center" Width="40" FontFamily="Webdings" FontSize="36"/>
+    </Grid>
+        <TextBlock x:Name="Month" Grid.Row="0" TextWrapping="Wrap" Text="January" VerticalAlignment="Center" FontSize="36" HorizontalAlignment="Center" TextAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold"/>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
-            </Grid.RowDefinitions>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="1" TextWrapping="Wrap" Text="Morning shift" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FFEBED82" IsReadOnly="True"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="2" TextWrapping="Wrap" Text="Evening shift" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FF7186D9" IsReadOnly="True"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="3" TextWrapping="Wrap" Text="Day off" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FFD971D0" IsReadOnly="True"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="4" TextWrapping="Wrap" Text="No info" VerticalAlignment="Center" Width="80" TextAlignment="Center" Background="#FFB9B9B9" IsReadOnly="True"/>
+            <Button FontFamily="Yu Gothic UI Light" FontWeight="Bold" Content="UPDATE SCHEDULE" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" IsEnabled="False" Height="30" Width="150"/>
         </Grid>
-        <TextBlock x:Name="Month" TextWrapping="Wrap" Text="January" VerticalAlignment="Top" Height="52" Width="692" FontSize="36" HorizontalAlignment="Center" TextAlignment="Center"/>
-        <TextBox HorizontalAlignment="Left" Margin="566,487,0,0" TextWrapping="Wrap" Text="Morning shift" VerticalAlignment="Top" Width="80" TextAlignment="Center" Background="#FFEBED82" IsReadOnly="True"/>
-        <TextBox HorizontalAlignment="Left" Margin="651,487,0,0" TextWrapping="Wrap" Text="Evening shift" VerticalAlignment="Top" Width="80" TextAlignment="Center" Background="#FF7186D9" IsReadOnly="True"/>
-        <TextBox HorizontalAlignment="Left" Margin="736,487,0,0" TextWrapping="Wrap" Text="Day off" VerticalAlignment="Top" Width="80" TextAlignment="Center" Background="#FFD971D0" IsReadOnly="True"/>
-        <TextBox HorizontalAlignment="Left" Margin="821,487,0,0" TextWrapping="Wrap" Text="No info" VerticalAlignment="Top" Width="80" TextAlignment="Center" Background="#FFB9B9B9" IsReadOnly="True"/>
-        <Button Content="4" VerticalAlignment="Center" Click="ButtonR_Click" Height="40" Margin="0,0,40,0" HorizontalAlignment="Right" Width="40" FontSize="36" FontFamily="Webdings"/>
-        <Button Content="3" VerticalAlignment="Top" Click="ButtonL_Click" Height="40" Margin="40,252,0,0" HorizontalAlignment="Left" Width="40" FontFamily="Webdings" FontSize="36"/>
+        
 
     </Grid>
 </UserControl>
