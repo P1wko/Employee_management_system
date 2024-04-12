@@ -46,6 +46,7 @@ namespace Platformy_Projekt
                     Text = dayLabel.ToString(),
                     IsReadOnly = true,
                     FontFamily = new FontFamily("Yu Gothic UI Light"),
+                    FontSize = 16,
                     FontWeight = FontWeights.Bold,
                     Background = new SolidColorBrush(Color.FromRgb(118, 171, 174)),
                     BorderThickness = new Thickness(0),
@@ -76,6 +77,10 @@ namespace Platformy_Projekt
                     Name = $"a{i + 1}",
                     Background = new SolidColorBrush(Color.FromRgb(185, 185, 185)),
                     IsReadOnly = true,
+                    FontFamily = new FontFamily("Yu Gothic UI Light"),
+                    FontSize = 16,
+                    BorderThickness = new Thickness(2),
+                    FontWeight = FontWeights.Bold,
                     Cursor = Cursors.Arrow
                 };
                 RegisterName($"a{i + 1}", date);

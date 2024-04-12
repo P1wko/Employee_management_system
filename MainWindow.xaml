@@ -10,43 +10,24 @@
         Width="1200" 
         Icon="/pobrane.jpg"
         Closing="MainWindow_OnClosing_">
+    
     <Window.Resources>
-        <Style x:Key="CustomButtonStyle" TargetType="Button">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="FontFamily" Value="Yu Gothic UI Light"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="{TemplateBinding BorderThickness}">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter Property="Background" Value="Transparent"/>
-                                <Setter Property="Foreground" Value="Gray"/>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#31363F"/>
-                                <Setter Property="Foreground" Value="#EEEEEE"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
-    <Grid>
+
+    <Grid Background="#EEEEEE">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0" Background="#76ABAE">
+            
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -60,14 +41,15 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="employeesBtn" Content="EMPLOYEES" Grid.Row="1" Click="employeesBtn_Click" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
-            <Button x:Name="messagesBtn" Content="MESSAGES" Grid.Row="2" Click="messagesBtn_Click" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
-            <Button x:Name="tasksBtn" Content="TASKS" Grid.Row="3" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
-            <Button x:Name="scheduleBtn" Content="SCHEDULE" Grid.Row="4" Click="scheduleBtn_Click" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
-            <Button x:Name="timerBtn" Content="TIMER" Grid.Row="5" Click="timerBtn_Click" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
-            <Button x:Name="logoutBtn" Content="LOG OUT" Grid.Row="10" Click="logoutBtn_Click" IsEnabled="False" Style="{StaticResource CustomButtonStyle}"/>
+            
+            <Button x:Name="employeesBtn" Content="EMPLOYEES" Grid.Row="1" Click="employeesBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
+            <Button x:Name="messagesBtn" Content="MESSAGES" Grid.Row="2" Click="messagesBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
+            <Button x:Name="tasksBtn" Content="TASKS" Grid.Row="3" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
+            <Button x:Name="scheduleBtn" Content="SCHEDULE" Grid.Row="4" Click="scheduleBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
+            <Button x:Name="timerBtn" Content="TIMER" Grid.Row="5" Click="timerBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
+            <Button x:Name="logoutBtn" Content="LOG OUT" Grid.Row="10" Click="logoutBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
         </Grid>
-        <ContentControl x:Name="contentGrid" Grid.Column="1"/>
+        <ContentControl x:Name="contentGrid" Grid.Column="1" Background="#EEEEEE"/>
 
 
         <Grid/>
