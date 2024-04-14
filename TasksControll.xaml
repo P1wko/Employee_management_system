@@ -9,8 +9,9 @@
     <Grid>
         <Grid x:Name="TaskGrid" ShowGridLines="True">
             <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
                 <RowDefinition Height="40*"/>
-                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -18,9 +19,13 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Ellipse x:Name="TodoSphere" HorizontalAlignment="Center" AllowDrop="True" Drop="TodoOnDrop" Height="11" Stroke="Black" VerticalAlignment="Center" Width="200" Grid.Row="1" Fill="#FFB76B6B"/>
-            <TextBox x:Name="DragMe" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Przenieś mnie" VerticalAlignment="Top" Width="200" Height="55" IsReadOnly="True" PreviewMouseLeftButtonDown="DragTextbox"/>
-            <Ellipse x:Name="InProgressSphere" HorizontalAlignment="Center" AllowDrop="True" Drop="InProgressOnDrop" Height="11" Stroke="Black" VerticalAlignment="Center" Width="200" Fill="#FFB76B6B" Grid.Row="1" Grid.Column="1"/>
+            <Ellipse x:Name="TodoSphere" HorizontalAlignment="Center" AllowDrop="True" Drop="TodoOnDrop" Height="11" Stroke="Black" VerticalAlignment="Bottom" Width="200" Grid.Row="2" Fill="#FFB76B6B"/>
+            <TextBox x:Name="DragMe" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Przenieś mnie" VerticalAlignment="Top" Width="200" Height="55" IsReadOnly="True" PreviewMouseLeftButtonDown="DragTextbox" Grid.Row="1"/>
+            <Ellipse x:Name="InProgressSphere" HorizontalAlignment="Center" AllowDrop="True" Drop="InProgressOnDrop" Height="11" Stroke="Black" VerticalAlignment="Center" Width="200" Fill="#FFB76B6B" Grid.Row="2" Grid.Column="1"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="To do" VerticalAlignment="Center" Height="31" Width="55" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="In progress" VerticalAlignment="Center" Height="31" Width="111" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Grid.Column="1"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Waiting" VerticalAlignment="Center" Height="31" Width="73" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Grid.Column="2"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Completed" VerticalAlignment="Center" Height="31" Width="109" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Grid.Column="3"/>
         </Grid>
     </Grid>
 </UserControl>
