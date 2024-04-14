@@ -41,8 +41,8 @@
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="15*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="login" Grid.Row="1" VerticalAlignment="Center" Text="siema" TextWrapping="Wrap"/>
-            <PasswordBox x:Name="passwd" Grid.Row="2" VerticalAlignment="Center" Password="siema"/>
+            <TextBox x:Name="login" Grid.Row="1" VerticalAlignment="Center" Text="admin" TextWrapping="Wrap"/>
+            <PasswordBox x:Name="passwd" Grid.Row="2" VerticalAlignment="Center" Password="admin"/>
         </Grid>
 
         <Button x:Name="loginBtn" Grid.Column="3" Content="LOG IN" Click="loginBtn_Click" Style="{StaticResource ButtonStyle}" Width="100" Height="40" FontSize="18"/>

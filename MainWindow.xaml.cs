@@ -62,11 +62,7 @@ namespace Platformy_Projekt
         private void employeesBtn_Click(object sender, RoutedEventArgs e)
         {
             contentGrid.Content = employeesControl;
-            employeesBtn.FontFamily = new FontFamily("Yu Gothic UI");
-            messagesBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            tasksBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            timerBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            scheduleBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
+            bolding((Button)sender);
         }
 
 
@@ -86,44 +82,39 @@ namespace Platformy_Projekt
 
             contentGrid.Content = logInControl;
 
-            employeesBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            messagesBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            tasksBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            timerBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            scheduleBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
+            bolding((Button)sender);
         }
 
         private void messagesBtn_Click(object sender, RoutedEventArgs e)
         {
             contentGrid.Content = messagesControl;
 
-            employeesBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            messagesBtn.FontFamily = new FontFamily("Yu Gothic UI");
-            tasksBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            timerBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            scheduleBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
+            bolding((Button)sender);
         }
 
         private void timerBtn_Click(object sender, RoutedEventArgs e)
         {
             contentGrid.Content = timeControl;
 
-            employeesBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            messagesBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            tasksBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            timerBtn.FontFamily = new FontFamily("Yu Gothic UI");
-            scheduleBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
+            bolding((Button)sender);
         }
 
         private void scheduleBtn_Click(object sender, RoutedEventArgs e)
         {
             contentGrid.Content = scheduleControl;
 
+            bolding((Button)sender);
+        }
+
+        private void bolding(Button btn)
+        {
             employeesBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
             messagesBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
             tasksBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
             timerBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            scheduleBtn.FontFamily = new FontFamily("Yu Gothic UI");
+            scheduleBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
+
+            btn.FontFamily = new FontFamily("Yu Gothic UI");
         }
     }
 
