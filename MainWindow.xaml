@@ -44,7 +44,7 @@
             
             <Button x:Name="employeesBtn" Content="EMPLOYEES" Grid.Row="1" Click="employeesBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
             <Button x:Name="messagesBtn" Content="MESSAGES" Grid.Row="2" Click="messagesBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
-            <Button x:Name="tasksBtn" Content="TASKS" Grid.Row="3" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
+            <Button x:Name="tasksBtn" Content="TASKS" Grid.Row="3" IsEnabled="False" Style="{StaticResource MenuButtonStyle}" Click="tasksBtn_Click"/>
             <Button x:Name="scheduleBtn" Content="SCHEDULE" Grid.Row="4" Click="scheduleBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
             <Button x:Name="timerBtn" Content="TIMER" Grid.Row="5" Click="timerBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
             <Button x:Name="logoutBtn" Content="LOG OUT" Grid.Row="10" Click="logoutBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>

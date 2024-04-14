@@ -30,6 +30,7 @@ namespace Platformy_Projekt
         private MessagesControl messagesControl;
         private ScheduleControl scheduleControl;
         private EmployeesControl employeesControl;
+        private TasksControll tasksControll;
 
         public MainWindow()
         {
@@ -55,6 +56,7 @@ namespace Platformy_Projekt
             messagesControl = new MessagesControl();
             scheduleControl = new ScheduleControl();
             employeesControl = new EmployeesControl();
+            tasksControll = new TasksControll();
 
             contentGrid.Content = null;
         }
@@ -105,6 +107,11 @@ namespace Platformy_Projekt
 
             bolding((Button)sender);
         }
+        private void tasksBtn_Click(object sender, RoutedEventArgs e)
+        {
+            contentGrid.Content = tasksControll;
+            bolding((Button)sender);
+        }
 
         private void bolding(Button btn)
         {
@@ -116,6 +123,7 @@ namespace Platformy_Projekt
 
             btn.FontFamily = new FontFamily("Yu Gothic UI");
         }
+
     }
 
     
