@@ -63,7 +63,7 @@ namespace Platformy_Projekt
         public string? Surname { get; set; }
         public int Permissions { get; set; }
 
-        private LoggedUser(int id, string? userName, string? name, string? surname, int permissions)
+        private LoggedUser(int id, string? name, string? surname, string? userName, int permissions)
         {
             Id = id;
             UserName = userName;
@@ -72,9 +72,9 @@ namespace Platformy_Projekt
             Permissions = permissions;
         }
 
-        public static void SetInstance(int id, string? userName, string? name, string? surname, int permissions)
+        public static void SetInstance(int id,string? name, string? surname, string? userName, int permissions)
         {
-            instance = new LoggedUser(id, userName, name, surname, permissions);
+            instance = new LoggedUser(id, name, surname, userName, permissions);
         }
 
         public static LoggedUser GetInstance()

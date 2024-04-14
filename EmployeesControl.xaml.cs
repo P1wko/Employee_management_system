@@ -42,7 +42,7 @@ namespace Platformy_Projekt
 
             try
             {
-                string query = "SELECT * FROM users";
+                string query = "SELECT id, name, surname, login FROM users";
                 MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
 
                 command.ExecuteNonQuery();
@@ -54,9 +54,9 @@ namespace Platformy_Projekt
                 dt.Columns[0].ColumnName = "ID";
                 dt.Columns[1].ColumnName = "Name";
                 dt.Columns[2].ColumnName = "Surname";
+                dt.Columns[3].ColumnName = "Login";
                 //dt.Columns[2].ColumnName = "Department";
                 //dt.Columns[3].ColumnName = "E-mail";
-                dt.Columns[3].ColumnName = "Salary";
                 //dt.Columns[3].ColumnName = "Actions";
 
                 usersGrid.ItemsSource = dt.DefaultView;

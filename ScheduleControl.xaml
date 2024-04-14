@@ -71,6 +71,7 @@
             <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="4" Text="No info" VerticalAlignment="Center" Width="90" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFB9B9B9" IsReadOnly="True" Cursor="Arrow" BorderThickness="0" FontSize="14"/>
             <Button Content="UPDATE SCHEDULE" Grid.Column="0" Height="30" Width="150" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Margin="20,0,0,0"/>
         </Grid>
+        <ComboBox x:Name="UsersList" HorizontalAlignment="Left" SelectionChanged="SelectedUserChanged"  Margin="620,0,0,0" VerticalAlignment="Center" Width="120"/>
 
 
     </Grid>

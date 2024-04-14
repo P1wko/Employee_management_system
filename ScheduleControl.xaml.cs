@@ -27,13 +27,19 @@ namespace Platformy_Projekt
         private DateTime today;
         
         LoggedUser loggedUser;
+        private int userId;
+        private DataTable comboBoxUsersTable;
         public ScheduleControl()
         {
             InitializeComponent();
+
             loggedUser = LoggedUser.GetInstance();
+            userId = loggedUser.Id;
+
             today = DateTime.Today;
             DrawCalendar();
             PaintCalendar();
+            SetComboBoxUsers();
         }
 
         private void DrawCalendar()
@@ -102,7 +108,7 @@ namespace Platformy_Projekt
             try
             {
 
-                string query = $"SELECT date, shift FROM schedule WHERE workerId = {loggedUser.Id} AND MONTH(date)={(int)today.Month} AND YEAR(date)={(int)today.Year};";
+                string query = $"SELECT date, shift FROM schedule WHERE workerId = {userId} AND MONTH(date)={(int)today.Month} AND YEAR(date)={(int)today.Year};";
                 MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                 command.ExecuteNonQuery();
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
@@ -139,6 +145,29 @@ namespace Platformy_Projekt
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        private void SetComboBoxUsers()
+        {
+            string query = $"SELECT id, name, surname FROM users;";
+            MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
+            command.ExecuteNonQuery();
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
+            comboBoxUsersTable = new DataTable("schedule");
+            dataAdapter.Fill(comboBoxUsersTable);
+            foreach (DataRow row in comboBoxUsersTable.Rows)
+            {
+                string user = $"{row["name"]} {row["surname"]}";
+                UsersList.Items.Add(user);
+            }
+
+            UsersList.SelectedItem = $"{loggedUser.Name} {loggedUser.Surname}";
+        }
+
+        private void SelectedUserChanged(object sender, SelectionChangedEventArgs args)
+        {
+            userId = (int)comboBoxUsersTable.Rows[UsersList.SelectedIndex]["id"];
+            PaintCalendar();
         }
 
         private void ButtonR_Click(object sender, RoutedEventArgs e)

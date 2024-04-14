@@ -43,7 +43,7 @@ namespace Platformy_Projekt
                 {
                     int id = Convert.ToInt16(dt.Rows[0]["id"].ToString());
                     int perms = Convert.ToInt16(dt.Rows[0]["permissions"].ToString());
-                    LoggedUser.SetInstance(id, dt.Rows[0]["name"].ToString(), dt.Rows[0]["surname"].ToString(), dt.Rows[0]["surname"].ToString(), perms);
+                    LoggedUser.SetInstance(id, dt.Rows[0]["name"].ToString(), dt.Rows[0]["surname"].ToString(), dt.Rows[0]["login"].ToString(), perms);
 
                     UserLoggedIn.Invoke();
 
