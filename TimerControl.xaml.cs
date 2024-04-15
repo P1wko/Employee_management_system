@@ -87,11 +87,11 @@ namespace Platformy_Projekt
             switch (shift)
             {
                 case 1:
-                    current = DateTime.Today.AddHours(17) - DateTime.Now;
+                    current = DateTime.Today.AddHours(15) - DateTime.Now;
                     timer.Start();
                     break;
                 case 2:
-                    current = DateTime.Today.AddHours(22) - DateTime.Now;
+                    current = DateTime.Today.AddHours(23) - DateTime.Now;
                     timer.Start();
                     break;
                 default:

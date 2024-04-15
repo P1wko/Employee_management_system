@@ -277,3 +277,4 @@ C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_managemen
 C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\ref\Platformy Projekt.dll
 C:\Users\admin\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\Styles.baml
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\Styles.baml
+C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\Styles.baml

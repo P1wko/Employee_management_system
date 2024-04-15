@@ -22,6 +22,22 @@ namespace Platformy_Projekt
             InitializeComponent();
         }
 
+        private void CompletedOnDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetData(typeof(TextBox)) is TextBox dragedTextBox)
+            {
+                Grid.SetColumn(dragedTextBox, 3);
+            }
+        }
+
+        private void WaitingOnDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetData(typeof(TextBox)) is TextBox dragedTextBox)
+            {
+                Grid.SetColumn(dragedTextBox, 2);
+            }
+        }
+
         private void InProgressOnDrop(object sender, DragEventArgs e)
         {
             if (e.Data.GetData(typeof(TextBox)) is TextBox dragedTextBox)

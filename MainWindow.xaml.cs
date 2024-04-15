@@ -120,7 +120,7 @@ namespace Platformy_Projekt
             tasksBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
             timerBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
             scheduleBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-
+            logoutBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
             btn.FontFamily = new FontFamily("Yu Gothic UI");
         }
 

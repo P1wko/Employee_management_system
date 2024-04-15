@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Platformy_Projekt"
              mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800" >
+             d:DesignHeight="450" d:DesignWidth="800" d:Background="White">
     <Grid>
-        <TextBlock FontFamily="Yu Gothic UI Light" FontWeight="Bold" x:Name="Time" HorizontalAlignment="Center" TextWrapping="Wrap" Text="08:00" VerticalAlignment="Center" FontSize="72"/>
+        <TextBlock FontFamily="Yu Gothic UI Light" FontWeight="Bold" x:Name="Time" HorizontalAlignment="Stretch" TextAlignment="Center" TextWrapping="Wrap" Text="08:00" VerticalAlignment="Center" FontSize="72"/>
 
     </Grid>
 </UserControl>
