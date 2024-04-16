@@ -84,7 +84,7 @@ namespace Platformy_Projekt
 
             contentGrid.Content = logInControl;
 
-            bolding((Button)sender);
+            bolding((Button)null);
         }
 
         private void messagesBtn_Click(object sender, RoutedEventArgs e)
@@ -121,7 +121,10 @@ namespace Platformy_Projekt
             timerBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
             scheduleBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
             logoutBtn.FontFamily = new FontFamily("Yu Gothic UI Light");
-            btn.FontFamily = new FontFamily("Yu Gothic UI");
+            if(btn != null)
+            {
+                btn.FontFamily = new FontFamily("Yu Gothic UI");
+            }
         }
 
     }

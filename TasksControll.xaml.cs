@@ -100,10 +100,6 @@ namespace Platformy_Projekt
         }
 
 
-
-
-
-
         private void CompletedOnDrop(object sender, DragEventArgs e)
         {
             try
@@ -188,9 +184,16 @@ namespace Platformy_Projekt
         private void Refresh()
         {
             toDoGrid.Children.Clear();
+            toDoGrid.RowDefinitions.Clear();
+
             inProgressGrid.Children.Clear();
+            inProgressGrid.RowDefinitions.Clear();
+
             waitingGrid.Children.Clear();
+            waitingGrid.RowDefinitions.Clear();
+
             completedGrid.Children.Clear();
+            completedGrid.RowDefinitions.Clear();
 
             DrawTasks();
         }
