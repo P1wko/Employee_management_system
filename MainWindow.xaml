@@ -10,7 +10,8 @@
         Width="1200" 
         Icon="/pobrane.jpg"
         Closing="MainWindow_OnClosing_"
-        MinWidth="800">
+        MinWidth="800"
+        MinHeight="500">
     
     <Window.Resources>
         <ResourceDictionary>

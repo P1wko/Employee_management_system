@@ -64,18 +64,18 @@
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
                 <ColumnDefinition Width="4*"/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="1" Text="Morning shift" VerticalAlignment="Center" Width="90" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Background="#FFEBED82" IsReadOnly="True" Cursor="Arrow" BorderThickness="0" FontSize="14"/>
-            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="2" Text="Evening shift" VerticalAlignment="Center" Width="90" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF7186D9" IsReadOnly="True" Cursor="Arrow" BorderThickness="0" FontSize="14"/>
-            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="3" Text="Day off" VerticalAlignment="Center" Width="90" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD971D0" IsReadOnly="True" Cursor="Arrow" BorderThickness="0" FontSize="14"/>
-            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="4" Text="No info" VerticalAlignment="Center" Width="90" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFB9B9B9" IsReadOnly="True" Cursor="Arrow" BorderThickness="0" FontSize="14"/>
-            <Button Content="UPDATE SCHEDULE" Grid.Column="0" Height="30" Width="150" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="0" Text="Morning shift" VerticalAlignment="Center" Width="90" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Background="#FFEBED82" IsReadOnly="True" Cursor="Arrow" BorderThickness="0" FontSize="14"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="1" Text="Evening shift" VerticalAlignment="Center" Width="90" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF7186D9" IsReadOnly="True" Cursor="Arrow" BorderThickness="0" FontSize="14"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="2" Text="Day off" VerticalAlignment="Center" Width="90" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFD971D0" IsReadOnly="True" Cursor="Arrow" BorderThickness="0" FontSize="14"/>
+            <TextBox FontFamily="Yu Gothic UI Light" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="3" Text="No info" VerticalAlignment="Center" Width="90" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFB9B9B9" IsReadOnly="True" Cursor="Arrow" BorderThickness="0" FontSize="14"/>
+            <Button Content="UPDATE SCHEDULE" Grid.Column="4" Height="30" Width="150" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Right" Margin="0,0,20,0"/>
         </Grid>
         
 

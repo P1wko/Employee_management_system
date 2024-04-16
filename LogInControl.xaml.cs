@@ -59,7 +59,7 @@ namespace Platformy_Projekt
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Błędne dane logowania");
+                MessageBox.Show(ex.Message);
             }
         }
     }

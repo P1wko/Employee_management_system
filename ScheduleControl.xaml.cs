@@ -54,7 +54,8 @@ namespace Platformy_Projekt
                     FontFamily = new FontFamily("Yu Gothic UI Light"),
                     FontSize = 16,
                     FontWeight = FontWeights.Bold,
-                    Background = new SolidColorBrush(Color.FromRgb(118, 171, 174)),
+                    Background = new SolidColorBrush(Color.FromRgb(49, 54, 63)),
+                    Foreground = new SolidColorBrush(Color.FromRgb(221, 221, 221)),
                     BorderThickness = new Thickness(0),
                     TextAlignment = TextAlignment.Center,
                     VerticalContentAlignment = VerticalAlignment.Center,
@@ -167,6 +168,16 @@ namespace Platformy_Projekt
         private void SelectedUserChanged(object sender, SelectionChangedEventArgs args)
         {
             userId = (int)comboBoxUsersTable.Rows[UsersList.SelectedIndex]["id"];
+
+            foreach (var child in Calendar.Children)
+            {
+                if (child is TextBox textBox && !string.IsNullOrEmpty(textBox.Name))
+                {
+                    UnregisterName(textBox.Name);
+                }
+            }
+            Calendar.Children.Clear();
+            DrawCalendar();
             PaintCalendar();
         }
 

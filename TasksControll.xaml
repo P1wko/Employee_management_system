@@ -7,29 +7,62 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" d:Background="White">
     <Grid>
-        <Grid x:Name="TaskGrid" ShowGridLines="True">
+        <Grid x:Name="TaskGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="3*"/>
                 <RowDefinition Height="40*"/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Border Background="Transparent" Panel.ZIndex="-1" x:Name="TodoBorder" HorizontalAlignment="Stretch" AllowDrop="True" Drop="TodoOnDrop" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="0"/>
-            <Border Background="Transparent" Panel.ZIndex="-1" x:Name="InProgressBorder" HorizontalAlignment="Stretch" AllowDrop="True" Drop="InProgressOnDrop" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="1"/>
-            <Border Background="Transparent" Panel.ZIndex="-1" x:Name="WaitingBorder" HorizontalAlignment="Stretch" AllowDrop="True" Drop="WaitingOnDrop" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="2"/>
-            <Border Background="Transparent" Panel.ZIndex="-1" x:Name="CompletedBorder" HorizontalAlignment="Stretch" AllowDrop="True" Drop="CompletedOnDrop" VerticalAlignment="Stretch" Grid.Row="1" Grid.Column="3"/>
 
-            <TextBox x:Name="DragMe" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="Przenieś mnie" VerticalAlignment="Top" Height="55" IsReadOnly="True" PreviewMouseLeftButtonDown="DragTextbox" Grid.Row="1" Grid.Column="0"/>
-            <TextBox x:Name="DragMe2" HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="Przenieś mnie 2" VerticalAlignment="Top" Height="55" IsReadOnly="True" PreviewMouseLeftButtonDown="DragTextbox" Grid.Row="1" Grid.Column="1"/>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
-            <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center" TextWrapping="Wrap" Text="To do" VerticalAlignment="Center" Height="31" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Grid.Column="0" Grid.Row="0"/>
-            <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center" TextWrapping="Wrap" Text="In progress" VerticalAlignment="Center" Height="31" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Grid.Column="1" Grid.Row="0"/>
-            <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center" TextWrapping="Wrap" Text="Waiting" VerticalAlignment="Center" Height="31" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Grid.Column="2" Grid.Row="0"/>
-            <TextBlock HorizontalAlignment="Stretch" TextAlignment="Center" TextWrapping="Wrap" Text="Completed" VerticalAlignment="Center" Height="31" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Grid.Column="3" Grid.Row="0"/>
+                <TextBox Drop="TodoOnDrop" IsReadOnly="True" Cursor="Arrow" Background="#31363F" BorderThickness="0" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Text="To do" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Foreground="#DDDDDD"/>
+                <TextBox Drop="InProgressOnDrop" IsReadOnly="True" Cursor="Arrow" Background="#31363F" BorderThickness="0" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Text="In progress" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Foreground="#DDDDDD"/>
+                <TextBox Drop="WaitingOnDrop" IsReadOnly="True" Cursor="Arrow" Background="#31363F" BorderThickness="0" Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Text="Waiting" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Foreground="#DDDDDD"/>
+                <TextBox Drop="CompletedOnDrop" IsReadOnly="True" Cursor="Arrow" Background="#31363F" BorderThickness="0" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" Text="Completed" FontSize="22" FontFamily="Yu Gothic UI Light" AutomationProperties.IsColumnHeader="True" Foreground="#DDDDDD"/>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <ScrollViewer Grid.Column="0">
+                    <Grid>
+                        <Border Background="Transparent" Panel.ZIndex="-1" x:Name="TodoBorder" HorizontalAlignment="Stretch" AllowDrop="True" Drop="TodoOnDrop" VerticalAlignment="Stretch" />
+                        <Grid x:Name="toDoGrid" />
+                    </Grid>
+                </ScrollViewer>
+
+                <ScrollViewer Grid.Column="1">
+                    <Grid>
+                        <Border Background="Transparent" Panel.ZIndex="-1" x:Name="InProgressBorder" HorizontalAlignment="Stretch" AllowDrop="True" Drop="InProgressOnDrop" VerticalAlignment="Stretch"/>
+                        <Grid x:Name="inProgressGrid" />
+                    </Grid>
+                </ScrollViewer>
+
+                <ScrollViewer Grid.Column="2">
+                    <Grid>
+                        <Border Background="Transparent" Panel.ZIndex="-1" x:Name="WaitingBorder" HorizontalAlignment="Stretch" AllowDrop="True" Drop="WaitingOnDrop" VerticalAlignment="Stretch" Grid.Column="2"/>
+                        <Grid x:Name="waitingGrid" />
+                    </Grid>
+                </ScrollViewer>
+                <ScrollViewer Grid.Column="3">
+                    <Grid>
+                        <Border Background="Transparent" Panel.ZIndex="-1" x:Name="CompletedBorder" HorizontalAlignment="Stretch" AllowDrop="True" Drop="CompletedOnDrop" VerticalAlignment="Stretch" Grid.Column="3"/>
+                        <Grid x:Name="completedGrid" />
+                    </Grid>
+                </ScrollViewer>
+
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>
