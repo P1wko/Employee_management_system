@@ -110,7 +110,7 @@ namespace Platformy_Projekt
                     MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                     command.ExecuteNonQuery();
                 }
-                Refresh();
+                refreshTasks();
             }
             catch (Exception f)
             {
@@ -128,7 +128,7 @@ namespace Platformy_Projekt
                     MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                     command.ExecuteNonQuery();
                 }
-                Refresh();
+                refreshTasks();
             }
             catch (Exception f)
             {
@@ -146,7 +146,7 @@ namespace Platformy_Projekt
                     MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                     command.ExecuteNonQuery();
                 }
-                Refresh();
+                refreshTasks();
             }
             catch (Exception f)
             {
@@ -164,7 +164,7 @@ namespace Platformy_Projekt
                     MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                     command.ExecuteNonQuery();
                 }
-                Refresh();
+                refreshTasks();
             }
             catch (Exception f)
             {
@@ -181,7 +181,7 @@ namespace Platformy_Projekt
             }
         }
 
-        private void Refresh()
+        private void refreshTasks()
         {
             toDoGrid.Children.Clear();
             toDoGrid.RowDefinitions.Clear();
@@ -196,6 +196,11 @@ namespace Platformy_Projekt
             completedGrid.RowDefinitions.Clear();
 
             DrawTasks();
+        }
+
+        private void refreshBtnClick(object sender, RoutedEventArgs e)
+        {
+            refreshTasks();
         }
     }
 }

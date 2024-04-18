@@ -170,5 +170,17 @@ namespace Platformy_Projekt
             element.FontWeight = FontWeights.Bold;
             element.Cursor = Cursors.Arrow;
         }
+
+        private void refreshEmployees()
+        {
+            contentGrid.Children.Clear();
+            contentGrid.RowDefinitions.Clear();
+            ShowEmployees();
+        }
+
+        private void refreshBtnClick(object sender, RoutedEventArgs e)
+        {
+            refreshEmployees();
+        }
     }
 }

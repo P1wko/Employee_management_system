@@ -168,36 +168,22 @@ namespace Platformy_Projekt
         private void SelectedUserChanged(object sender, SelectionChangedEventArgs args)
         {
             userId = (int)comboBoxUsersTable.Rows[UsersList.SelectedIndex]["id"];
-
-            foreach (var child in Calendar.Children)
-            {
-                if (child is TextBox textBox && !string.IsNullOrEmpty(textBox.Name))
-                {
-                    UnregisterName(textBox.Name);
-                }
-            }
-            Calendar.Children.Clear();
-            DrawCalendar();
-            PaintCalendar();
+            refreshCalendar();
         }
 
         private void ButtonR_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var child in Calendar.Children)
-            {
-                if (child is TextBox textBox && !string.IsNullOrEmpty(textBox.Name))
-                {
-                    UnregisterName(textBox.Name);
-                }
-            }
-            Calendar.Children.Clear();
-
             today = today.AddMonths(1);
-            DrawCalendar();
-            PaintCalendar();
+            refreshCalendar();
         }
 
         private void ButtonL_Click(object sender, RoutedEventArgs e)
+        {
+            today = today.AddMonths(-1);
+            refreshCalendar();
+        }
+
+        private void refreshCalendar()
         {
             foreach (var child in Calendar.Children)
             {
@@ -207,8 +193,6 @@ namespace Platformy_Projekt
                 }
             }
             Calendar.Children.Clear();
-
-            today = today.AddMonths(-1);
             DrawCalendar();
             PaintCalendar();
         }

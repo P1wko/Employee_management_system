@@ -98,6 +98,7 @@ namespace Platformy_Projekt
                     button.Background = MessageBackground();
                     button.BorderThickness = new Thickness(0);
                     button.Cursor = Cursors.Hand;
+                    button.FontFamily = new FontFamily("Yu Gothic UI Light");
                     contentGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(40) });
                     Grid.SetRow(button, j);
                     contentGrid.Children.Add(button);
@@ -136,25 +137,25 @@ namespace Platformy_Projekt
             sendMessage.Show();
         }
 
-        private void Refresh()
+        private void refreshMessages()
         {
             contentGrid.RowDefinitions.Clear();
             contentGrid.Children.Clear();
             FetchMessages();
         }
 
-        private void RefreshBtnClick(object sender, RoutedEventArgs e)
+        private void refreshBtnClick(object sender, RoutedEventArgs e)
         {
-            Refresh();
+            refreshMessages();
         }
 
         private LinearGradientBrush MessageBackground()
         {
             GradientStop gradientStop1 = new GradientStop();
-            gradientStop1.Color = Color.FromRgb(221, 221, 221); // #222831
+            gradientStop1.Color = Color.FromRgb(200, 200, 200); // #222831
 
             GradientStop gradientStop2 = new GradientStop();
-            gradientStop2.Color = Color.FromRgb(240, 240, 240); // #31363F
+            gradientStop2.Color = Color.FromRgb(238, 238, 238); // #31363F
             gradientStop2.Offset = 1;
 
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush();

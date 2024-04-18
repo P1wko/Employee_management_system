@@ -49,7 +49,7 @@
             </Grid.ColumnDefinitions>
 
             <Button Grid.Column="2" x:Name="newMessage" Click="WriteMessage" Content="WRITE MESSAGE" Height="20" Width="100" Style="{StaticResource ButtonStyle}"/>
-            <Button Grid.Column="3" x:Name="refresh" Click="RefreshBtnClick" Content="REFRESH" Height="20" Width="100" Style="{StaticResource ButtonStyle}"/>
+            <Button Grid.Column="3" x:Name="refresh" Click="refreshBtnClick" Content="REFRESH" Height="20" Width="100" Style="{StaticResource ButtonStyle}"/>
         </Grid>
     </Grid>
 
