@@ -336,3 +336,7 @@ G:\Github\Employee_management_system\obj\Debug\net6.0-windows\Message.g.cs
 G:\Github\Employee_management_system\obj\Debug\net6.0-windows\Message.baml
 G:\Github\Employee_management_system\obj\Debug\net6.0-windows\SendMessage.g.cs
 G:\Github\Employee_management_system\obj\Debug\net6.0-windows\SendMessage.baml
+C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\Message.g.cs
+C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\SendMessage.g.cs
+C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\Message.baml
+C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\SendMessage.baml

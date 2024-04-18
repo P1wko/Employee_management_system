@@ -32,7 +32,8 @@
 
     <Style x:Key="ButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="#76ABAE"/>
-        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#31363F" />
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontFamily" Value="Yu Gothic UI Light"/>
