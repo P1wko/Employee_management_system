@@ -59,9 +59,26 @@ namespace Platformy_Projekt
                     var array = dt.Rows[j].ItemArray;
                     for (int i = 0; i < (array.Length - 1); i++)
                     {
-                        grid.ColumnDefinitions.Add(new ColumnDefinition());
+                        if (i == 0)
+                        {
+                            grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(0) });
+                        }
+                        else
+                        {
+                            grid.ColumnDefinitions.Add(new ColumnDefinition());
+                        }
+                        
                         TextBlock textBlock = new TextBlock();
-                        textBlock.HorizontalAlignment = HorizontalAlignment.Center;
+                        if(i == 2)
+                        {
+                            textBlock.HorizontalAlignment = HorizontalAlignment.Left;
+                        }
+                        else
+                        {
+                            textBlock.HorizontalAlignment = HorizontalAlignment.Center;
+                            textBlock.Margin = new Thickness(20, 0, 0, 0);
+                        }
+                        textBlock.VerticalAlignment = VerticalAlignment.Center;
 
                         if (i != (array.Length - 2))
                         {
@@ -76,10 +93,12 @@ namespace Platformy_Projekt
                         grid.Children.Add(textBlock);
                     }
 
-                    button.Height = 50;
                     button.Content = grid;
                     button.Click += OpenMessage;
-                    contentGrid.RowDefinitions.Add(new RowDefinition());
+                    button.Background = MessageBackground();
+                    button.BorderThickness = new Thickness(0);
+                    button.Cursor = Cursors.Hand;
+                    contentGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(40) });
                     Grid.SetRow(button, j);
                     contentGrid.Children.Add(button);
                 }
@@ -115,6 +134,36 @@ namespace Platformy_Projekt
             SendMessage sendMessage;
             sendMessage = new SendMessage();
             sendMessage.Show();
+        }
+
+        private void Refresh()
+        {
+            contentGrid.RowDefinitions.Clear();
+            contentGrid.Children.Clear();
+            FetchMessages();
+        }
+
+        private void RefreshBtnClick(object sender, RoutedEventArgs e)
+        {
+            Refresh();
+        }
+
+        private LinearGradientBrush MessageBackground()
+        {
+            GradientStop gradientStop1 = new GradientStop();
+            gradientStop1.Color = Color.FromRgb(221, 221, 221); // #222831
+
+            GradientStop gradientStop2 = new GradientStop();
+            gradientStop2.Color = Color.FromRgb(240, 240, 240); // #31363F
+            gradientStop2.Offset = 1;
+
+            LinearGradientBrush linearGradientBrush = new LinearGradientBrush();
+            linearGradientBrush.StartPoint = new Point(0.5, 0);
+            linearGradientBrush.EndPoint = new Point(0.5, 1);
+            linearGradientBrush.GradientStops.Add(gradientStop1);
+            linearGradientBrush.GradientStops.Add(gradientStop2);
+
+            return linearGradientBrush;
         }
     }
 }

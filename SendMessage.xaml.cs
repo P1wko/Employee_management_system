@@ -60,7 +60,7 @@ namespace Platformy_Projekt
         {
             int selectedUserId = 0;
             foreach (DataRow user in UsersDataTable.Rows) {
-                if(UsersList.SelectedValue.ToString() == (user[1] + " " + user[2]))
+                if(UsersList.SelectedValue!=null && UsersList.SelectedValue.ToString() == (user[1] + " " + user[2]))
                 {
                     selectedUserId = (int)user[0];
                 }
@@ -80,9 +80,12 @@ namespace Platformy_Projekt
                 {
                     MessageBox.Show(ex.Message);
                 }
+                Close();
             }
-
-            Close();
+            else
+            {
+                MessageBox.Show("Addressee has not been chosen");
+            }
 
         }
 

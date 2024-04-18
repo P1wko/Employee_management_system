@@ -79,11 +79,13 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="4*"/>
-                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="16*"/>
             </Grid.ColumnDefinitions>
 
             <Button Grid.Column="0" Content="3" Click="GoBackToMessages" Style="{StaticResource ButtonStyle}" FontFamily="webdings" Width="20" Height="20" FontSize="18"/>
             <Button Grid.Column="1" Content="REPLY" HorizontalAlignment="Center" Click="Reply" Style="{StaticResource ButtonStyle}" Width="90" Height="20"/>
+            <Button Grid.Column="2" Content="DELETE" HorizontalAlignment="Center" Style="{StaticResource ButtonStyle}" Width="90" Height="20"/>
         </Grid>
 
     </Grid>

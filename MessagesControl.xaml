@@ -6,11 +6,50 @@
              xmlns:local="clr-namespace:Platformy_Projekt"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Grid x:Name="contentGrid" VerticalAlignment="Top"/>
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
 
-        <Grid x:Name="MakeMessage" Margin="0,400,0,0">
-            <Button x:Name="newMessage" Click="WriteMessage" Content="Write message" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="40" Width="143" Margin="10,0,0,10" BorderThickness="3" Background="#FFE0A7A7" BorderBrush="#FF868686"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="16"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBox Cursor="Arrow" Text="Title" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" FontSize="22" Foreground="#DDDDDD" BorderThickness="0" Grid.Column="0" Background="#31363F" IsReadOnly="True"/>
+            <TextBox Cursor="Arrow" Text="Content" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" FontSize="22" Foreground="#DDDDDD" BorderThickness="0" Grid.Column="1" Background="#31363F" IsReadOnly="True"/>
+            <TextBox Cursor="Arrow" Text="Sender" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" FontSize="22" Foreground="#DDDDDD" BorderThickness="0" Grid.Column="2" Background="#31363F" IsReadOnly="True"/>
+            <Border Background="#31363F" Grid.Column="3" />
+        </Grid>
+
+        <ScrollViewer Grid.Row="1">
+            <Grid x:Name="contentGrid"/>
+        </ScrollViewer>
+
+        <Grid x:Name="MakeMessage" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="2" x:Name="newMessage" Click="WriteMessage" Content="WRITE MESSAGE" Height="20" Width="100" Style="{StaticResource ButtonStyle}"/>
+            <Button Grid.Column="3" x:Name="refresh" Click="RefreshBtnClick" Content="REFRESH" Height="20" Width="100" Style="{StaticResource ButtonStyle}"/>
         </Grid>
     </Grid>
 
