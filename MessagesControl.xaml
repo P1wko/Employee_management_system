@@ -6,7 +6,12 @@
              xmlns:local="clr-namespace:Platformy_Projekt"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid x:Name="contentGrid" VerticalAlignment="Top">
-            
+    <Grid>
+        <Grid x:Name="contentGrid" VerticalAlignment="Top"/>
+
+        <Grid x:Name="MakeMessage" Margin="0,400,0,0">
+            <Button x:Name="newMessage" Click="WriteMessage" Content="Write message" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="40" Width="143" Margin="10,0,0,10" BorderThickness="3" Background="#FFE0A7A7" BorderBrush="#FF868686"/>
+        </Grid>
     </Grid>
+
 </UserControl>

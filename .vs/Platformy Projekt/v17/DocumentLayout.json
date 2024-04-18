@@ -1,46 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\",
+  "WorkspaceRootPath": "G:\\Github\\Employee_management_system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\taskscontroll.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:taskscontroll.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|g:\\github\\employee_management_system\\sendmessage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:sendmessage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\taskscontroll.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:taskscontroll.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|g:\\github\\employee_management_system\\message.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:message.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|g:\\github\\employee_management_system\\message.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:message.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|g:\\github\\employee_management_system\\sendmessage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:sendmessage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|g:\\github\\employee_management_system\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\employeescontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:employeescontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|g:\\github\\employee_management_system\\messagescontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:messagescontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\logincontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:logincontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\schedulecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:schedulecontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|c:\\users\\admin\\documents\\github\\employee_management_system\\employeescontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:employeescontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|g:\\github\\employee_management_system\\messagescontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2B760A13-D07E-4E5B-AFF8-C42EA2E9A738}|Platformy Projekt.csproj|solutionrelative:messagescontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,131 +38,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TasksControll.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\TasksControll.xaml.cs",
-              "RelativeDocumentMoniker": "TasksControll.xaml.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\TasksControll.xaml.cs",
-              "RelativeToolTip": "TasksControll.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
+              "Title": "SendMessage.xaml.cs",
+              "DocumentMoniker": "G:\\Github\\Employee_management_system\\SendMessage.xaml.cs",
+              "RelativeDocumentMoniker": "SendMessage.xaml.cs",
+              "ToolTip": "G:\\Github\\Employee_management_system\\SendMessage.xaml.cs",
+              "RelativeToolTip": "SendMessage.xaml.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwCIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T13:06:42.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TasksControll.xaml",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\TasksControll.xaml",
-              "RelativeDocumentMoniker": "TasksControll.xaml",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\TasksControll.xaml",
-              "RelativeToolTip": "TasksControll.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-16T12:48:30.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH4AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T12:27:00.813Z",
+              "WhenOpened": "2024-04-18T09:29:20.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EmployeesControl.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\EmployeesControl.xaml.cs",
-              "RelativeDocumentMoniker": "EmployeesControl.xaml.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\EmployeesControl.xaml.cs",
-              "RelativeToolTip": "EmployeesControl.xaml.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAowDYAAAAgAAAA",
+              "Title": "SendMessage.xaml",
+              "DocumentMoniker": "G:\\Github\\Employee_management_system\\SendMessage.xaml",
+              "RelativeDocumentMoniker": "SendMessage.xaml",
+              "ToolTip": "G:\\Github\\Employee_management_system\\SendMessage.xaml",
+              "RelativeToolTip": "SendMessage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-18T09:19:02.261Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Message.xaml",
+              "DocumentMoniker": "G:\\Github\\Employee_management_system\\Message.xaml",
+              "RelativeDocumentMoniker": "Message.xaml",
+              "ToolTip": "G:\\Github\\Employee_management_system\\Message.xaml",
+              "RelativeToolTip": "Message.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-17T13:52:44.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Message.xaml.cs",
+              "DocumentMoniker": "G:\\Github\\Employee_management_system\\Message.xaml.cs",
+              "RelativeDocumentMoniker": "Message.xaml.cs",
+              "ToolTip": "G:\\Github\\Employee_management_system\\Message.xaml.cs",
+              "RelativeToolTip": "Message.xaml.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAA9wEcAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T13:45:41.412Z",
+              "WhenOpened": "2024-04-17T11:32:29.509Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-16T12:00:22.158Z",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "G:\\Github\\Employee_management_system\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "G:\\Github\\Employee_management_system\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAYwIsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T11:43:03.293Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "LogInControl.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\LogInControl.xaml.cs",
-              "RelativeDocumentMoniker": "LogInControl.xaml.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\LogInControl.xaml.cs",
-              "RelativeToolTip": "LogInControl.xaml.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwD0AAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T11:24:57.24Z",
+              "Title": "MessagesControl.xaml",
+              "DocumentMoniker": "G:\\Github\\Employee_management_system\\MessagesControl.xaml",
+              "RelativeDocumentMoniker": "MessagesControl.xaml",
+              "ToolTip": "G:\\Github\\Employee_management_system\\MessagesControl.xaml",
+              "RelativeToolTip": "MessagesControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-17T08:47:29.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "LogInControl.xaml",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\LogInControl.xaml",
-              "RelativeDocumentMoniker": "LogInControl.xaml",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\LogInControl.xaml",
-              "RelativeToolTip": "LogInControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-16T11:24:55.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ScheduleControl.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\ScheduleControl.xaml.cs",
-              "RelativeDocumentMoniker": "ScheduleControl.xaml.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\ScheduleControl.xaml.cs",
-              "RelativeToolTip": "ScheduleControl.xaml.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAowJAAAAAMAAAA",
+              "Title": "MessagesControl.xaml.cs",
+              "DocumentMoniker": "G:\\Github\\Employee_management_system\\MessagesControl.xaml.cs",
+              "RelativeDocumentMoniker": "MessagesControl.xaml.cs",
+              "ToolTip": "G:\\Github\\Employee_management_system\\MessagesControl.xaml.cs",
+              "RelativeToolTip": "MessagesControl.xaml.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAA9wDoAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-16T09:42:47.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Styles.xaml",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\Styles.xaml",
-              "RelativeDocumentMoniker": "Styles.xaml",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\Styles.xaml",
-              "RelativeToolTip": "Styles.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-12T19:19:07.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EmployeesControl.xaml",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\EmployeesControl.xaml",
-              "RelativeDocumentMoniker": "EmployeesControl.xaml",
-              "ToolTip": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\EmployeesControl.xaml",
-              "RelativeToolTip": "EmployeesControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-16T16:48:36.669Z",
+              "WhenOpened": "2024-04-17T08:47:29.101Z",
               "EditorCaption": ""
             }
           ]

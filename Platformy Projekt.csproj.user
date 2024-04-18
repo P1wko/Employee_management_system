@@ -13,10 +13,16 @@
     <Compile Update="LogInControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Message.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MessagesControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ScheduleControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SendMessage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="TasksControll.xaml.cs">
@@ -36,10 +42,16 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Message.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MessagesControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ScheduleControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SendMessage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TasksControll.xaml">

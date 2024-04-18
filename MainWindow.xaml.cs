@@ -18,6 +18,7 @@ using System.Data;
 using System.Reflection;
 using Newtonsoft.Json;
 using System.IO;
+using Mysqlx.Crud;
 
 namespace Platformy_Projekt
 {
@@ -31,6 +32,7 @@ namespace Platformy_Projekt
         private ScheduleControl scheduleControl;
         private EmployeesControl employeesControl;
         private TasksControll tasksControll;
+        private Message messWind;
 
         public MainWindow()
         {
@@ -38,6 +40,7 @@ namespace Platformy_Projekt
 
             contentGrid.Content = logInControl;
             logInControl.UserLoggedIn += userLoggedIn;
+
             DatabaseConnection.GetConnection();
         }
 
@@ -54,6 +57,7 @@ namespace Platformy_Projekt
 
             timeControl = new TimerControl();
             messagesControl = new MessagesControl();
+            messagesControl.ButtonClicked += ChangeMessageControlWindow;
             scheduleControl = new ScheduleControl();
             employeesControl = new EmployeesControl();
             tasksControll = new TasksControll();
@@ -125,6 +129,20 @@ namespace Platformy_Projekt
             {
                 btn.FontFamily = new FontFamily("Yu Gothic UI");
             }
+        }
+
+        private void ChangeMessageControlWindow()
+        {
+            messWind = new Message();
+            messWind.BackButtonClicked += GetBackToMessages;
+            messagesControl.MessageOpen += messWind.Fetchmessage;
+            contentGrid.Content = messWind;
+        }
+
+        private void GetBackToMessages()
+        {
+            contentGrid.Content = messagesControl;
+            messagesControl.MessageOpen -= messWind.Fetchmessage;
         }
 
     }
