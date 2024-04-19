@@ -1,0 +1,24 @@
+﻿<Window x:Class="Platformy_Projekt.AddUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Platformy_Projekt"
+        mc:Ignorable="d"
+        Title="AddUser" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Surname" HorizontalAlignment="Left" Margin="400,41,0,0" TextWrapping="Wrap" Text="Surname" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Login" HorizontalAlignment="Left" Margin="10,132,0,0" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="Permissions" HorizontalAlignment="Left" Margin="581,39,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Boss" Tag="3" />
+            <ComboBoxItem Content="Scheduler" Tag="2"/>
+            <ComboBoxItem Content="User" Tag="1" IsSelected="True"/>
+        </ComboBox>
+        <TextBox x:Name="Email" HorizontalAlignment="Left" Margin="10,232,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Salary" HorizontalAlignment="Left" Margin="400,232,0,0" TextWrapping="Wrap" Text="Salary" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Confirm" Click="Confirm" HorizontalAlignment="Left" Margin="10,399,0,0" VerticalAlignment="Top" Height="25" Width="120"/>
+        <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="400,141,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

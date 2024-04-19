@@ -182,5 +182,11 @@ namespace Platformy_Projekt
         {
             refreshEmployees();
         }
+
+        private void AddUserClick(object sender, RoutedEventArgs e)
+        {
+            AddUser addUser = new AddUser();
+            addUser.Show();
+        }
     }
 }

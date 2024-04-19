@@ -26,6 +26,9 @@ namespace Platformy_Projekt
         private DataTable UsersDataTable;
         private LoggedUser loggedUser;
 
+        public delegate void RefreshMessages();
+        public event RefreshMessages RefreshMessagesWindow;
+
         public SendMessage()
         {   
             InitializeComponent();
@@ -86,6 +89,9 @@ namespace Platformy_Projekt
             {
                 MessageBox.Show("Addressee has not been chosen");
             }
+
+            RefreshMessagesWindow?.Invoke();
+
 
         }
 

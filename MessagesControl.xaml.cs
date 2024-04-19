@@ -34,6 +34,7 @@ namespace Platformy_Projekt
         public event OnMessageSendButtonClick MessageSendButtonClick;
 
         private string messageId;
+        private SendMessage sendMessage;
 
         public MessagesControl()
         {
@@ -149,16 +150,22 @@ namespace Platformy_Projekt
 
         private void WriteMessage(object sender, RoutedEventArgs e)
         {
-            SendMessage sendMessage;
+
             sendMessage = new SendMessage();
             sendMessage.Show();
         }
 
-        private void refreshMessages()
+        public void refreshMessages()
         {
+
             contentGrid.RowDefinitions.Clear();
             contentGrid.Children.Clear();
             FetchMessages();
+        }
+
+        public void refreshMessagesWindow2()
+        {
+            sendMessage.RefreshMessagesWindow += refreshMessages;
         }
 
         private void refreshBtnClick(object sender, RoutedEventArgs e)
