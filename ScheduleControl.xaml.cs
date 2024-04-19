@@ -225,12 +225,31 @@ namespace Platformy_Projekt
             Brush buttonBackground = button.Background;
             if(buttonBackground.ToString() != "#FFB9B9B9")
             {
-                MessageBox.Show("Ta data jest już w bazie danych");
+                try
+                {
+                    string query = $"DELETE FROM `schedule` WHERE `workerId` = {userId} AND `date` = '{today.Year + "-" + today.Month + "-" + button.Content + " "}';";
+                    MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception f)
+                {
+                    MessageBox.Show(f.Message);
+                }
             }
-            else
-            {
-                MessageBox.Show(today.Year+"-"+today.Month+"-"+button.Content+" "+setShift+" "+userId);
+
+            if(setShift != 0) {
+                try
+                {
+                    string query = $"INSERT INTO `schedule` (`workerId`, `date`, `shift`) VALUES ('{userId}', '{today.Year + "-" + today.Month + "-" + button.Content + " "}', '{setShift}');";
+                    MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception f)
+                {
+                    MessageBox.Show(f.Message);
+                }
             }
+            refreshCalendar();
         }
     }
 }
