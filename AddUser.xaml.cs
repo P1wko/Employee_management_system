@@ -19,9 +19,6 @@ using MySql.Data.MySqlClient;
 
 namespace Platformy_Projekt
 {
-    /// <summary>
-    /// Interaction logic for AddUser.xaml
-    /// </summary>
     public partial class AddUser : Window
     {
         public AddUser()
@@ -37,7 +34,7 @@ namespace Platformy_Projekt
 
             try
             {
-                string query = $"INSERT INTO users (name, surname, permissions, login, password, salary, email) VALUES ('{Name.Text}', '{Surname.Text}', {perm}, '{Login.Text}', '{Password.Password}', {float.Parse(Salary.Text)}, '{Email.Text}')";
+                string query = $"INSERT INTO users (name, surname, permissions, login, password, salary, email) VALUES ('{Name.Text}', '{Surname.Text}', {perm}, '{Login.Text}', '{HashPassword.HashString(Password.Password)}', {float.Parse(Salary.Text)}, '{Email.Text}')";
                 MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                 command.ExecuteNonQuery();
             }

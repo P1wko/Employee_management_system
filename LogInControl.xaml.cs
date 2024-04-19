@@ -31,7 +31,7 @@ namespace Platformy_Projekt
             try
             {
                 string lgn = login.Text;
-                string pswd = passwd.Password;
+                string pswd = HashPassword.HashString(passwd.Password);
                 string query = $"SELECT * FROM users WHERE login='{lgn}';";
                 MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                 command.ExecuteNonQuery();

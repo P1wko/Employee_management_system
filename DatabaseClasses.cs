@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using System.IO;
-using Org.BouncyCastle.Bcpg.Sig;
+using System.Security.Cryptography;
 
 namespace Platformy_Projekt
 {
@@ -97,5 +97,22 @@ namespace Platformy_Projekt
         October,
         November,
         December,
+    }
+
+    public class HashPassword
+    {
+        public static string HashString(string text)
+        {
+            using SHA256 sha = SHA256.Create();
+            byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(text));
+
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                builder.Append(bytes[i].ToString("x2"));
+            }
+
+            return builder.ToString();
+        } 
     }
 }

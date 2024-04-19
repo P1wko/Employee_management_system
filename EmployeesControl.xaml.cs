@@ -19,9 +19,6 @@ using System.Xml.Linq;
 
 namespace Platformy_Projekt
 {
-    /// <summary>
-    /// Logika interakcji dla klasy EmployeesControl.xaml
-    /// </summary>
     public partial class EmployeesControl : UserControl
     {
         DatabaseData? databaseConn;
