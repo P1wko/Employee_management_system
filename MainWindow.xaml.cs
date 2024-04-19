@@ -54,6 +54,7 @@ namespace Platformy_Projekt
             logoutBtn.IsEnabled = true;
 
             loggedUser = LoggedUser.GetInstance();
+            CheckPerms();
 
             timeControl = new TimerControl();
             messagesControl = new MessagesControl();
@@ -145,6 +146,24 @@ namespace Platformy_Projekt
         {
             contentGrid.Content = messagesControl;
             messagesControl.MessageOpen -= messWind.Fetchmessage;
+        }
+
+        private void CheckPerms()
+        {
+            switch (loggedUser.Permissions)
+            {
+                case 1:
+                    break;
+                case 2:
+                    employeesBtn.IsEnabled = false;
+                    break;
+                case 3:
+                    employeesBtn.IsEnabled = false;
+                    break;
+                default:
+                    employeesBtn.IsEnabled = false;
+                    break;
+            }
         }
 
     }

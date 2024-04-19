@@ -36,12 +36,14 @@ namespace Platformy_Projekt
 
             loggedUser = LoggedUser.GetInstance();
             userId = loggedUser.Id;
-            setShift = 0;
+            setShift = -1;
 
             today = DateTime.Today;
             DrawCalendar();
             PaintCalendar();
             SetComboBoxUsers();
+
+            CheckPerms();
         }
 
         private void DrawCalendar()
@@ -223,33 +225,55 @@ namespace Platformy_Projekt
         {
             Button button = sender as Button;
             Brush buttonBackground = button.Background;
-            if(buttonBackground.ToString() != "#FFB9B9B9")
-            {
-                try
-                {
-                    string query = $"DELETE FROM `schedule` WHERE `workerId` = {userId} AND `date` = '{today.Year + "-" + today.Month + "-" + button.Content + " "}';";
-                    MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
-                    command.ExecuteNonQuery();
-                }
-                catch (Exception f)
-                {
-                    MessageBox.Show(f.Message);
-                }
-            }
+            
 
-            if(setShift != 0) {
+            if(setShift >= 0) {
                 try
                 {
-                    string query = $"INSERT INTO `schedule` (`workerId`, `date`, `shift`) VALUES ('{userId}', '{today.Year + "-" + today.Month + "-" + button.Content + " "}', '{setShift}');";
-                    MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
-                    command.ExecuteNonQuery();
+                    if (buttonBackground.ToString() != "#FFB9B9B9")
+                    {
+                        string query = $"DELETE FROM `schedule` WHERE `workerId` = {userId} AND `date` = '{today.Year + "-" + today.Month + "-" + button.Content + " "}';";
+                        MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
+                        command.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        string query = $"INSERT INTO `schedule` (`workerId`, `date`, `shift`) VALUES ('{userId}', '{today.Year + "-" + today.Month + "-" + button.Content + " "}', '{setShift}');";
+                        MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
+                        command.ExecuteNonQuery();
+                    }
                 }
-                catch (Exception f)
+                catch (Exception ex)
                 {
-                    MessageBox.Show(f.Message);
+                    MessageBox.Show(ex.Message);
                 }
             }
             refreshCalendar();
+        }
+
+        private void CheckPerms()
+        {
+            switch (loggedUser.Permissions)
+            {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    UsersList.Visibility = Visibility.Hidden;
+                    NoInfoBtn.Click -= NoInfoBtn_Click;
+                    DayOffBtn.Click -= DayOffBtn_Click;
+                    EveShiftBtn.Click -= EveningShiftBtn_Click;
+                    MornShiftBtn.Click -= MorningShiftBtn_Click;
+                    break;
+                default:
+                    UsersList.Visibility = Visibility.Hidden;
+                    NoInfoBtn.Click -= NoInfoBtn_Click;
+                    DayOffBtn.Click -= DayOffBtn_Click;
+                    EveShiftBtn.Click -= EveningShiftBtn_Click;
+                    MornShiftBtn.Click -= MorningShiftBtn_Click;
+                    break;
+            }
         }
     }
 }

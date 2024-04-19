@@ -77,10 +77,10 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="1" Content="Morning shift" Width="100" Height="20" Background="#FFEBED82" Click="MorningShiftBtn_Click" Style="{StaticResource ButtonStyle}"/>
-            <Button Grid.Column="2" Content="Evening shift" Width="100" Height="20" Background="#FF7186D9" Click="EveningShiftBtn_Click" Style="{StaticResource ButtonStyle}"/>
-            <Button Grid.Column="3" Content="Day off" Width="100" Height="20" Background="#FFD971D0" Click="DayOffBtn_Click" Style="{StaticResource ButtonStyle}"/>
-            <Button Grid.Column="4" Content="No info" Width="100" Height="20" Background="#FFB9B9B9" Click="NoInfoBtn_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="MornShiftBtn" Grid.Column="1" Content="Morning shift" Width="100" Height="20" Background="#FFEBED82" Click="MorningShiftBtn_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="EveShiftBtn" Grid.Column="2" Content="Evening shift" Width="100" Height="20" Background="#FF7186D9" Click="EveningShiftBtn_Click" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="DayOffBtn" Grid.Column="3" Content="Day off" Width="100" Height="20" Background="#FFD971D0" Click="DayOffBtn_Click" Style="{StaticResource ButtonStyle}" Cursor="Hand"/>
+            <Button x:Name="NoInfoBtn" Grid.Column="4" Content="No info" Width="100" Height="20" Background="#FFB9B9B9" Click="NoInfoBtn_Click" Style="{StaticResource ButtonStyle}"/>
         </Grid>
         
 
