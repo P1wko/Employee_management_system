@@ -85,7 +85,7 @@
 
             <Button Grid.Column="0" Content="3" Click="GoBackToMessages" Style="{StaticResource ButtonStyle}" FontFamily="webdings" Width="20" Height="20" FontSize="18"/>
             <Button Grid.Column="1" Content="Reply" HorizontalAlignment="Center" Click="Reply" Style="{StaticResource ButtonStyle}" Width="90" Height="20"/>
-            <Button Grid.Column="2" Content="Delete" HorizontalAlignment="Center" Style="{StaticResource ButtonStyle}" Width="90" Height="20"/>
+            <Button Grid.Column="2" Content="Delete" Click="Delete" HorizontalAlignment="Center" Style="{StaticResource ButtonStyle}" Width="90" Height="20"/>
         </Grid>
 
     </Grid>

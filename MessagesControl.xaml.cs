@@ -16,6 +16,7 @@ using MySql.Data.MySqlClient;
  using System.Data;
 using Mysqlx.Resultset;
 using System.Reflection.Metadata.Ecma335;
+using System.Security.Permissions;
 
 namespace Platformy_Projekt
 {
@@ -31,6 +32,8 @@ namespace Platformy_Projekt
 
         public delegate void OnMessageSendButtonClick();
         public event OnMessageSendButtonClick MessageSendButtonClick;
+
+        private string messageId;
 
         public MessagesControl()
         {
@@ -121,13 +124,27 @@ namespace Platformy_Projekt
 
             if (grid.Children[0] is TextBlock messageIdBlock)
             {
-                string messageId = messageIdBlock.Text;
+                messageId = messageIdBlock.Text;
 
                 MessageOpen?.Invoke(messageId);
             }
 
 
-
+        }
+            
+        public void DeleteMessage()
+        {
+            try
+            {
+                string query = $"DELETE FROM messages WHERE id = {messageId};";
+                MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
+                command.ExecuteNonQuery();
+            }
+            catch
+            {
+                MessageBox.Show("Wystąpił błąd podczas usuwania wiadomości");
+            }
+            refreshMessages();
         }
 
         private void WriteMessage(object sender, RoutedEventArgs e)

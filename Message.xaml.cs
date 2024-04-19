@@ -29,6 +29,13 @@ namespace Platformy_Projekt
         public delegate void OnReply(string userNameAndSurname);
         public event OnReply MessageReply;
 
+        public delegate void OnMessageDelete();
+        public event OnMessageDelete MessageDelete;
+
+        public delegate void OnMessageDeleteChangeWindow();
+        public event OnMessageDeleteChangeWindow MessageDeleteChangeWindow;
+
+
         public Message()
         {
             InitializeComponent();
@@ -70,6 +77,14 @@ namespace Platformy_Projekt
 
             MessageReply += sendMessage.OnReplyClick;
             MessageReply?.Invoke(NameAndSurname.Text);
+        }
+
+        public void Delete(object sender, RoutedEventArgs e)
+        {
+
+            MessageDelete?.Invoke();
+            MessageDeleteChangeWindow?.Invoke();
+
         }
 
     }

@@ -136,6 +136,8 @@ namespace Platformy_Projekt
             messWind = new Message();
             messWind.BackButtonClicked += GetBackToMessages;
             messagesControl.MessageOpen += messWind.Fetchmessage;
+            messWind.MessageDeleteChangeWindow += GetBackToMessages;
+            messWind.MessageDelete += messagesControl.DeleteMessage;
             contentGrid.Content = messWind;
         }
 
