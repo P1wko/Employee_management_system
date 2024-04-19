@@ -19,9 +19,6 @@ using MySql.Data.MySqlClient;
 
 namespace Platformy_Projekt
 {
-    /// <summary>
-    /// Logika interakcji dla klasy ScheduleControl.xaml
-    /// </summary>
     public partial class ScheduleControl : UserControl
     {
         private DateTime today;

@@ -352,3 +352,5 @@ F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\SendMessag
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\AddUser.baml
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\Message.baml
 F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\SendMessage.baml
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\AddTask.g.cs
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\AddTask.baml

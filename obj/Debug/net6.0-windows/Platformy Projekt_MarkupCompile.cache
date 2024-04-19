@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 F:\Michal\Projekt\Employee_management_system\App.xaml
-11-2020347489
+12-1106872206
 
-131777314138
+14-1428846069
 2031734666788
-AddUser.xaml;EmployeesControl.xaml;LogInControl.xaml;MainWindow.xaml;Message.xaml;MessagesControl.xaml;ScheduleControl.xaml;SendMessage.xaml;Styles.xaml;TasksControll.xaml;TimerControl.xaml;
+AddTask.xaml;AddUser.xaml;EmployeesControl.xaml;LogInControl.xaml;MainWindow.xaml;Message.xaml;MessagesControl.xaml;ScheduleControl.xaml;SendMessage.xaml;Styles.xaml;TasksControll.xaml;TimerControl.xaml;
 
 False
 

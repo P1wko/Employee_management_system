@@ -202,5 +202,13 @@ namespace Platformy_Projekt
         {
             refreshTasks();
         }
+
+        private void CreateTaskBtnClick(object sender, RoutedEventArgs e)
+        {
+            AddTask addTask = new AddTask();
+            addTask.Show();
+
+            addTask.Closed += ((o, args) => DrawTasks());
+        }
     }
 }

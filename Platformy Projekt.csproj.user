@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AddTask.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="AddUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -36,6 +39,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AddTask.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="AddUser.xaml">
       <SubType>Designer</SubType>
     </Page>

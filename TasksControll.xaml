@@ -81,7 +81,7 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Button Style="{StaticResource ButtonStyle}" Grid.Column="2" Content="Create task" Width="100" Height="20"/>
+                <Button Style="{StaticResource ButtonStyle}" Grid.Column="2" Content="Create task" Width="100" Height="20" Click="CreateTaskBtnClick" Cursor="Hand"/>
                 <Button Style="{StaticResource ButtonStyle}" Grid.Column="3" Content="Refresh" Width="100" Height="20" Click="refreshBtnClick"/>
             </Grid>
         </Grid>
