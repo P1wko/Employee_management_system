@@ -29,12 +29,14 @@ namespace Platformy_Projekt
         LoggedUser loggedUser;
         private int userId;
         private DataTable comboBoxUsersTable;
+        private int setShift;
         public ScheduleControl()
         {
             InitializeComponent();
 
             loggedUser = LoggedUser.GetInstance();
             userId = loggedUser.Id;
+            setShift = 0;
 
             today = DateTime.Today;
             DrawCalendar();
@@ -78,18 +80,18 @@ namespace Platformy_Projekt
             int counter = 1;
             for (int i = 0; i < days; i++)
             {
-                TextBox date = new TextBox
+                Button date = new Button
                 {
-                    Text = $"{i + 1}",
+                    Content = $"{i + 1}",
                     Name = $"a{i + 1}",
                     Background = new SolidColorBrush(Color.FromRgb(185, 185, 185)),
-                    IsReadOnly = true,
                     FontFamily = new FontFamily("Yu Gothic UI Light"),
                     FontSize = 16,
-                    BorderThickness = new Thickness(2),
+                    BorderThickness = new Thickness(1),
                     FontWeight = FontWeights.Bold,
                     Cursor = Cursors.Arrow
                 };
+                date.Click += SetShift;
                 RegisterName($"a{i + 1}", date);
                 Grid.SetColumn(date, dayOfWeek);
                 Grid.SetRow(date, counter);
@@ -122,7 +124,7 @@ namespace Platformy_Projekt
 
                     string name = $"a{day}";
 
-                    TextBox? textbox = (TextBox?)Calendar.FindName(name);
+                    Button? textbox = (Button?)Calendar.FindName(name);
 
                     
                     int shift = (int)row["shift"];
@@ -187,7 +189,7 @@ namespace Platformy_Projekt
         {
             foreach (var child in Calendar.Children)
             {
-                if (child is TextBox textBox && !string.IsNullOrEmpty(textBox.Name))
+                if (child is Button textBox && !string.IsNullOrEmpty(textBox.Name))
                 {
                     UnregisterName(textBox.Name);
                 }
@@ -195,6 +197,40 @@ namespace Platformy_Projekt
             Calendar.Children.Clear();
             DrawCalendar();
             PaintCalendar();
+        }
+
+        private void NoInfoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            setShift = 0;
+        }
+
+        private void MorningShiftBtn_Click(object sender, RoutedEventArgs e)
+        {
+            setShift = 1;
+        }
+
+        private void EveningShiftBtn_Click(object sender, RoutedEventArgs e)
+        {
+            setShift = 2;
+        }
+
+        private void DayOffBtn_Click(object sender, RoutedEventArgs e)
+        {
+            setShift = 3;
+        }
+
+        private void SetShift(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Brush buttonBackground = button.Background;
+            if(buttonBackground.ToString() != "#FFB9B9B9")
+            {
+                MessageBox.Show("Ta data jest już w bazie danych");
+            }
+            else
+            {
+                MessageBox.Show(today.Year+"-"+today.Month+"-"+button.Content+" "+setShift+" "+userId);
+            }
         }
     }
 }

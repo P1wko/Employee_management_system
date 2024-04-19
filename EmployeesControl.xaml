@@ -66,8 +66,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button Style="{StaticResource ButtonStyle}" Grid.Column="2" Content="ADD USER" Width="100" Height="20"/>
-            <Button Style="{StaticResource ButtonStyle}" Grid.Column="3" Content="REFRESH" Width="100" Height="20" Click="refreshBtnClick"/>
+            <Button Style="{StaticResource ButtonStyle}" Grid.Column="2" Content="Add user" Width="100" Height="20"/>
+            <Button Style="{StaticResource ButtonStyle}" Grid.Column="3" Content="Refresh" Width="100" Height="20" Click="refreshBtnClick"/>
         </Grid>
     </Grid>
 </UserControl>

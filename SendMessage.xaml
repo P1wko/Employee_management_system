@@ -81,7 +81,7 @@
                 <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Click="OnSendMessageClick" Content="SEND MESSAGE" Style="{StaticResource ButtonStyle}" Height="20" Width="90"/>
+            <Button Grid.Column="0" Click="OnSendMessageClick" Content="Send message" Style="{StaticResource ButtonStyle}" Height="20" Width="90"/>
         </Grid>
 
     </Grid>
