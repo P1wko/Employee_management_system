@@ -233,7 +233,7 @@ namespace Platformy_Projekt
                         MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                         command.ExecuteNonQuery();
                     }
-                    else
+                    if(setShift > 0)
                     {
                         string query = $"INSERT INTO `schedule` (`workerId`, `date`, `shift`) VALUES ('{userId}', '{today.Year + "-" + today.Month + "-" + button.Content + " "}', '{setShift}');";
                         MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
