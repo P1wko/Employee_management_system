@@ -21,10 +21,14 @@ namespace Platformy_Projekt
 {
     public partial class EmployeesControl : UserControl
     {
+        LoggedUser loggedUser;
+        private int userId;
         DatabaseData? databaseConn;
         string? connectionString;
         public EmployeesControl()
         {
+            loggedUser = LoggedUser.GetInstance();
+            userId = loggedUser.Id;
             InitializeComponent();
             ShowEmployees();
         }
@@ -101,6 +105,8 @@ namespace Platformy_Projekt
                     actions.ItemsSource = getActionsColumnItems();
                     actions.VerticalAlignment = VerticalAlignment.Center;
                     actions.HorizontalAlignment = HorizontalAlignment.Center;
+                    actions.SelectionChanged += selectedAction;
+                    actions.Tag = row.Field<int>("ID");
                     Grid.SetColumn(actions, 0);
                     Grid.SetRow(actions, counter);
 
@@ -116,13 +122,13 @@ namespace Platformy_Projekt
                 MessageBox.Show(ex.Message);
             }
         }
-        private List<Button> getActionsColumnItems()
+        private List<ComboBoxItem> getActionsColumnItems()
         {
-            List<Button> items = new List<Button>();
-            Button sendMsg = new Button
+            List<ComboBoxItem> items = new List<ComboBoxItem>();
+            ComboBoxItem sendMsg = new ComboBoxItem
             {
                 BorderThickness = new Thickness(0),
-                Background = Brushes.Red,
+                Background = Brushes.Transparent,
                 Width = 100,
                 FontFamily = new FontFamily("Yu Gothic UI Light"),
                 FontWeight = FontWeights.Bold,
@@ -130,10 +136,10 @@ namespace Platformy_Projekt
             sendMsg.Content = "Send Message";
             items.Add(sendMsg);
 
-            Button edit = new Button
+            ComboBoxItem edit = new ComboBoxItem
             {
                 BorderThickness = new Thickness(0),
-                Background = Brushes.Red,
+                Background = Brushes.Transparent,
                 Width = 100,
                 FontFamily = new FontFamily("Yu Gothic UI Light"),
                 FontWeight = FontWeights.Bold,
@@ -141,10 +147,10 @@ namespace Platformy_Projekt
             edit.Content = "Edit";
             items.Add(edit);
 
-            Button delete = new Button
+            ComboBoxItem delete = new ComboBoxItem
             {
                 BorderThickness = new Thickness(0),
-                Background = Brushes.Red,
+                Background = Brushes.Transparent,
                 Width = 100,
                 FontFamily = new FontFamily("Yu Gothic UI Light"),
                 FontWeight = FontWeights.Bold,
@@ -185,5 +191,58 @@ namespace Platformy_Projekt
             AddUser addUser = new AddUser();
             addUser.Show();
         }
+
+        private void selectedAction(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+            ComboBoxItem item = comboBox.SelectedItem as ComboBoxItem;
+            int id = (int)comboBox.Tag;
+
+            if(item!=null && item.Content=="Send Message")
+            {
+                MessageBox.Show("Send to "+id);
+            }
+            else if(item!=null && item.Content == "Edit")
+            {
+                MessageBox.Show("Edit user "+id);
+            }
+            else if(item!=null && item.Content == "Delete")
+            {
+                if (id == userId)
+                {
+                    MessageBox.Show("You can't delete Yourself");
+                }
+                else
+                {
+                    delUser(id);
+                }
+            }
+            comboBox.SelectedItem = null;
+            
+        }
+
+        private void delUser(int id)
+        {
+            try
+            {
+                string query =
+                    $"DELETE FROM users WHERE `users`.`id` = {id}; " +
+                    $"DELETE FROM messages WHERE `messages`.`addresseeId` = {id}; " +
+                    $"DELETE FROM tasks WHERE `tasks`.`asignee` = {id}; " +
+                    $"DELETE FROM schedule WHERE `schedule`.`workerId` = {id};";
+
+                MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
+                command.ExecuteNonQuery();
+
+                refreshEmployees();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
     }
 }
