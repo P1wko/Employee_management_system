@@ -5,20 +5,94 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformy_Projekt"
         mc:Ignorable="d"
-        Title="AddTask" Height="450" Width="800">
+        Title="AddTask" Height="480" Width="800" MinHeight="480" MinWidth="600" Background="#DDDDDD">
+     
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
-        <ComboBox x:Name="UsersList" HorizontalAlignment="Left" Margin="80,88,0,0" VerticalAlignment="Top" Width="120">
-            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120"/>
-        </ComboBox>
-        <TextBox x:Name="TaskTitle" HorizontalAlignment="Left" Margin="80,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TaskBody" HorizontalAlignment="Left" Margin="80,199,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="Progress" HorizontalAlignment="Left" Margin="80,246,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="To do" Tag="todo"/>
-            <ComboBoxItem Content="In progress" Tag="inprogress"/>
-            <ComboBoxItem Content="Waiting" Tag="waiting"/>
-            <ComboBoxItem Content="Completed" Tag="completed"/>
-        </ComboBox>
-        <Button x:Name="SubmitBtn" Click="SubmitBtnClick" Content="Submit" HorizontalAlignment="Left" Margin="80,291,0,0" VerticalAlignment="Top" Height="30" Width="120"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#222831"/>
+                    <GradientStop Color="#31363F" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Foreground="#DDDDDD" Grid.Column="1" Content="Assignee:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            <ComboBox x:Name="UsersList" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="2" FontFamily="Yu Gothic UI Light" />
+
+            <Label Foreground="#DDDDDD" Grid.Column="4" Content="Progress:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            <ComboBox x:Name="Progress" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="5" FontFamily="Yu Gothic UI Light">
+                <ComboBoxItem Content="To do" Tag="todo" IsSelected="True"/>
+                <ComboBoxItem Content="In progress" Tag="inprogress"/>
+                <ComboBoxItem Content="Waiting" Tag="waiting"/>
+                <ComboBoxItem Content="Completed" Tag="completed"/>
+            </ComboBox>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#222831"/>
+                    <GradientStop Color="#31363F" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="2" x:Name="TaskTitle" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" TextAlignment="Justify" FontFamily="Yu Gothic Ui Light"/>
+            <Label Foreground="#DDDDDD" Grid.Column="1" Content="Title:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+        </Grid>
+        <Grid Grid.Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="10*"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBox AcceptsReturn="True" Grid.Column="1" Grid.Row="1" x:Name="TaskBody" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Stretch" TextAlignment="Justify" FontFamily="Yu Gothic UI Light"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" x:Name="SubmitBtn" Click="SubmitBtnClick" Content="Submit" Style="{StaticResource ButtonStyle}" Height="20" Width="90"/>
+        </Grid>
 
     </Grid>
 </Window>

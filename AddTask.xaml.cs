@@ -54,7 +54,7 @@ namespace Platformy_Projekt
             }
             else
             {
-                MessageBox.Show("Addressee has not been chosen");
+                MessageBox.Show("Assignee has not been chosen");
             }
         }
 
