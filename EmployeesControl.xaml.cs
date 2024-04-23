@@ -166,6 +166,7 @@ namespace Platformy_Projekt
             element.VerticalAlignment = VerticalAlignment.Center;
             element.HorizontalAlignment = HorizontalAlignment.Center;
             element.Background = Brushes.Transparent;
+            element.Foreground = (SolidColorBrush)FindResource("TextColorDarkBrush");
             element.FontFamily = new FontFamily("Yu Gothic UI Light");
             element.FontSize = 16;
             element.IsReadOnly = true;

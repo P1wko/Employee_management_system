@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformy_Projekt"
         mc:Ignorable="d"
-        Title="AddUser" Background="#EEEEEE" MaxHeight="300" MaxWidth="500" MinHeight="300" MinWidth="500">
+        Title="AddUser" Background="{StaticResource BackgroundColorBrush}" MaxHeight="300" MaxWidth="500" MinHeight="300" MinWidth="500">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -41,13 +41,13 @@
         <Button Grid.Row="3" Grid.Column="3" Content="Confirm" Click="Confirm" HorizontalAlignment="Stretch" Margin="10,0,20,0" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
         <PasswordBox Grid.Row="3" Grid.Column="1" x:Name="Password" HorizontalAlignment="Stretch" Margin="10,0,20,0" VerticalAlignment="Center"/>
 
-        <Label Content="Name" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Content="Surname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Content="Login" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Content="Password" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Content="Role" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Content="E-mail" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Content="Salary" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Name" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Surname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Login" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Password" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Role" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="E-mail" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Salary" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
 
     </Grid>
 </Window>

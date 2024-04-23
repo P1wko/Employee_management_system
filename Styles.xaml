@@ -5,6 +5,7 @@
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextColorDarkBrush}" />
         <Setter Property="FontSize" Value="20"/>
         <Setter Property="FontFamily" Value="Yu Gothic UI Light"/>
 		<Setter Property="Cursor" Value="Hand"/>
@@ -22,8 +23,8 @@
                             <Setter Property="Foreground" Value="Gray"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#31363F"/>
-                            <Setter Property="Foreground" Value="#EEEEEE"/>
+                            <Setter Property="Background" Value="{DynamicResource SecondaryColorBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextColorLightBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -32,9 +33,10 @@
     </Style>
 
     <Style x:Key="ButtonStyle" TargetType="Button">
-        <Setter Property="Background" Value="#76ABAE"/>
+        <Setter Property="Background" Value="{DynamicResource PrimaryColorBrush}"/>
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="BorderBrush" Value="#31363F" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SecondaryColorBrush}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextColorDarkBrush}" />
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontFamily" Value="Yu Gothic UI Light"/>
@@ -52,8 +54,8 @@
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#31363F"/>
-                            <Setter Property="Foreground" Value="#EEEEEE"/>
+                            <Setter Property="Background" Value="{DynamicResource SecondaryColorBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextColorLightBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -64,6 +66,7 @@
     <Style x:Key="ArrowButtonStyle" TargetType="Button">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextColorDarkBrush}" />
         <Setter Property="FontSize" Value="36"/>
         <Setter Property="FontFamily" Value="Webdings"/>
 		<Setter Property="Cursor" Value="Hand"/>
@@ -80,14 +83,35 @@
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#31363F"/>
-                            <Setter Property="Foreground" Value="#EEEEEE"/>
+                            <Setter Property="Background" Value="{DynamicResource SecondaryColorBrush}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TextColorLightBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
+
+
+
+    <Color x:Key="PrimaryColor"><!--#76ABAE-->RED</Color>
+    <Color x:Key="SecondaryColor"><!--#31363F-->BLUE</Color>
+    <Color x:Key="SecondaryColorFade"><!--#222831-->GREEN</Color>
+    <Color x:Key="BackgroundColor"><!--#EEEEEE-->ORANGE</Color>
+    <Color x:Key="BackgroundColorFade"><!--#CCCCCC-->PINK</Color>
+    <Color x:Key="TextColorLight"><!--#EEEEEE-->YELLOW</Color>
+    <Color x:Key="TextColorDark"><!--#31363F-->PURPLE</Color>
+    
+    
+    
+    
+    <SolidColorBrush x:Key="PrimaryColorBrush" Color="{DynamicResource PrimaryColor}" />
+    <SolidColorBrush x:Key="SecondaryColorBrush" Color="{DynamicResource SecondaryColor}" />
+    <SolidColorBrush x:Key="SecondaryColorFadeBrush" Color="{DynamicResource SecondaryColorFade}" />
+    <SolidColorBrush x:Key="BackgroundColorBrush" Color="{DynamicResource BackgroundColor}" />
+    <SolidColorBrush x:Key="BackgroundColorFadeBrush" Color="{DynamicResource BackgroundColorFade}" />
+    <SolidColorBrush x:Key="TextColorLightBrush" Color="{DynamicResource TextColorLight}" />
+    <SolidColorBrush x:Key="TextColorDarkBrush" Color="{DynamicResource TextColorDark}" />
 
 
 </ResourceDictionary>

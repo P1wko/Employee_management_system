@@ -25,8 +25,8 @@
         <Grid Grid.Row="0">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#222831"/>
-                    <GradientStop Color="#31363F" Offset="1"/>
+                    <GradientStop Color="{DynamicResource SecondaryColorFade}"/>
+                    <GradientStop Color="{DynamicResource SecondaryColor}" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
 
@@ -36,14 +36,14 @@
                 <ColumnDefinition Width="23*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Foreground="#DDDDDD" Grid.Column="2" x:Name="Title" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="16" TextAlignment="Left" FontFamily="Yu Gothic UI Light"/>
-            <Label Foreground="#DDDDDD" Grid.Column="1" Content="Title:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            <TextBlock Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="2" x:Name="Title" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="16" TextAlignment="Left" FontFamily="Yu Gothic UI Light"/>
+            <Label Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="1" Content="Title:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#222831"/>
-                    <GradientStop Color="#31363F" Offset="1"/>
+                    <GradientStop Color="{DynamicResource SecondaryColorFade}"/>
+                    <GradientStop Color="{DynamicResource SecondaryColor}" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
             <Grid.ColumnDefinitions>
@@ -54,10 +54,10 @@
                 <ColumnDefinition Width="10*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Foreground="#DDDDDD" Grid.Column="2" x:Name="Email" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="16" TextAlignment="Left"  FontFamily="Yu Gothic UI Light"/>
-            <TextBlock Foreground="#DDDDDD" Grid.Column="4" x:Name="NameAndSurname"  HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="16" TextAlignment="Left"  FontFamily="Yu Gothic UI Light"/>
-            <Label Foreground="#DDDDDD" Grid.Column="1" Content="Email:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
-            <Label Foreground="#DDDDDD" Grid.Column="3" Content="Sender:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            <TextBlock Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="2" x:Name="Email" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="16" TextAlignment="Left"  FontFamily="Yu Gothic UI Light"/>
+            <TextBlock Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="4" x:Name="NameAndSurname"  HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="16" TextAlignment="Left"  FontFamily="Yu Gothic UI Light"/>
+            <Label Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="1" Content="Email:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            <Label Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="3" Content="Sender:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
 
         </Grid>
         <Grid Grid.Row="2" >

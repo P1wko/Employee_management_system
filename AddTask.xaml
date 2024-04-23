@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformy_Projekt"
         mc:Ignorable="d"
-        Title="AddTask" Height="480" Width="800" MinHeight="480" MinWidth="600" Background="#DDDDDD">
+        Title="AddTask" Height="480" Width="800" MinHeight="480" MinWidth="600" Background="{StaticResource BackgroundColorBrush}">
      
     <Window.Resources>
         <ResourceDictionary>
@@ -26,8 +26,8 @@
         <Grid Grid.Row="0">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#222831"/>
-                    <GradientStop Color="#31363F" Offset="1"/>
+                    <GradientStop Color="{StaticResource SecondaryColorFade}"/>
+                    <GradientStop Color="{StaticResource SecondaryColor}" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
             <Grid.ColumnDefinitions>
@@ -40,10 +40,10 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Label Foreground="#DDDDDD" Grid.Column="1" Content="Assignee:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            <Label Foreground="{StaticResource TextColorLightBrush}" Grid.Column="1" Content="Assignee:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
             <ComboBox x:Name="UsersList" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="2" FontFamily="Yu Gothic UI Light" />
 
-            <Label Foreground="#DDDDDD" Grid.Column="4" Content="Progress:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            <Label Foreground="{StaticResource TextColorLightBrush}" Grid.Column="4" Content="Progress:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
             <ComboBox x:Name="Progress" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="5" FontFamily="Yu Gothic UI Light">
                 <ComboBoxItem Content="To do" Tag="todo" IsSelected="True"/>
                 <ComboBoxItem Content="In progress" Tag="inprogress"/>
@@ -56,8 +56,8 @@
         <Grid Grid.Row="1">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#222831"/>
-                    <GradientStop Color="#31363F" Offset="1"/>
+                    <GradientStop Color="{StaticResource SecondaryColorFade}"/>
+                    <GradientStop Color="{StaticResource SecondaryColor}" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
 
@@ -68,7 +68,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBox Grid.Column="2" x:Name="TaskTitle" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" TextAlignment="Justify" FontFamily="Yu Gothic Ui Light"/>
-            <Label Foreground="#DDDDDD" Grid.Column="1" Content="Title:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            <Label Foreground="{StaticResource TextColorLightBrush}" Grid.Column="1" Content="Title:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
         </Grid>
         <Grid Grid.Row="2" >
             <Grid.ColumnDefinitions>

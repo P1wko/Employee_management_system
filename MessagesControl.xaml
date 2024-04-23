@@ -29,11 +29,11 @@
                 <ColumnDefinition />
                 <ColumnDefinition Width="16"/>
             </Grid.ColumnDefinitions>
-            
-            <TextBox Cursor="Arrow" Text="Title" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" FontSize="22" Foreground="#DDDDDD" BorderThickness="0" Grid.Column="0" Background="#31363F" IsReadOnly="True"/>
-            <TextBox Cursor="Arrow" Text="Content" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" FontSize="22" Foreground="#DDDDDD" BorderThickness="0" Grid.Column="1" Background="#31363F" IsReadOnly="True"/>
-            <TextBox Cursor="Arrow" Text="Sender" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" FontSize="22" Foreground="#DDDDDD" BorderThickness="0" Grid.Column="2" Background="#31363F" IsReadOnly="True"/>
-            <Border Background="#31363F" Grid.Column="3" />
+
+            <TextBox Cursor="Arrow" Text="Title" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" FontSize="22" Foreground="{DynamicResource TextColorLightBrush}" BorderThickness="0" Grid.Column="0" Background="{DynamicResource SecondaryColorBrush}" IsReadOnly="True"/>
+            <TextBox Cursor="Arrow" Text="Content" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" FontSize="22" Foreground="{DynamicResource TextColorLightBrush}" BorderThickness="0" Grid.Column="1" Background="{DynamicResource SecondaryColorBrush}" IsReadOnly="True"/>
+            <TextBox Cursor="Arrow" Text="Sender" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextAlignment="Center" VerticalContentAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" FontSize="22" Foreground="{DynamicResource TextColorLightBrush}" BorderThickness="0" Grid.Column="2" Background="{DynamicResource SecondaryColorBrush}" IsReadOnly="True"/>
+            <Border Background="{DynamicResource SecondaryColorBrush}" Grid.Column="3" />
         </Grid>
 
         <ScrollViewer Grid.Row="1">

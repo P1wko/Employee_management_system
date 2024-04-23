@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformy_Projekt"
         mc:Ignorable="d"
-        Title="SendMessage" Height="480" Width="800" MinHeight="480" MinWidth="600" Background="#DDDDDD">
+        Title="SendMessage" Height="480" Width="800" MinHeight="480" MinWidth="600" Background="{DynamicResource BackgroundColorBrush}">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -26,8 +26,8 @@
         <Grid Grid.Row="0">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#222831"/>
-                    <GradientStop Color="#31363F" Offset="1"/>
+                    <GradientStop Color="{DynamicResource SecondaryColorFade}"/>
+                    <GradientStop Color="{DynamicResource SecondaryColor}" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
             <Grid.ColumnDefinitions>
@@ -37,7 +37,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Label Foreground="#DDDDDD" Grid.Column="1" Content="To:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            <Label Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="1" Content="To:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
             <ComboBox x:Name="UsersList" HorizontalAlignment="Left" VerticalAlignment="Center" Width="120" Grid.Column="2" FontFamily="Yu Gothic UI Light"/>
 
         </Grid>
@@ -45,8 +45,8 @@
         <Grid Grid.Row="1">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#222831"/>
-                    <GradientStop Color="#31363F" Offset="1"/>
+                    <GradientStop Color="{DynamicResource SecondaryColorFade}"/>
+                    <GradientStop Color="{DynamicResource SecondaryColor}" Offset="1"/>
                 </LinearGradientBrush>
             </Grid.Background>
 
@@ -58,7 +58,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBox Grid.Column="2" x:Name="Title" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="16" TextAlignment="Justify" FontFamily="Yu Gothic UI Light"/>
-            <Label Foreground="#DDDDDD" Grid.Column="1" Content="Title:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            <Label Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="1" Content="Title:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
         </Grid>
         <Grid Grid.Row="2" >
             <Grid.ColumnDefinitions>

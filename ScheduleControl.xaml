@@ -59,13 +59,13 @@
             <Button Content="3" Grid.Column="0" Grid.Row="1" Click="ButtonL_Click" Height="40" Width="40" Style="{StaticResource ArrowButtonStyle}"/>
         </Grid>
         
-        <Grid Grid.Row="0" Background="#31363F">
+        <Grid Grid.Row="0" Background="{DynamicResource SecondaryColorBrush}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="Month" Grid.Column="1" Text="January 2024" VerticalAlignment="Center" FontSize="22" HorizontalAlignment="Stretch" TextAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" Foreground="#DDDDDD"/>
+            <TextBlock x:Name="Month" Grid.Column="1" Text="January 2024" VerticalAlignment="Center" FontSize="22" HorizontalAlignment="Stretch" TextAlignment="Center" FontFamily="Yu Gothic UI Light" FontWeight="Bold" Foreground="{DynamicResource TextColorLightBrush}"/>
             <ComboBox x:Name="UsersList" Grid.Column="2" HorizontalAlignment="Center" SelectionChanged="SelectedUserChanged" VerticalAlignment="Center" Width="120" FontFamily="Yu Gothic UI Light" FontWeight="Bold"/>
         </Grid>
         <Grid Grid.Row="2">

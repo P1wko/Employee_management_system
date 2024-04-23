@@ -31,6 +31,7 @@ namespace Platformy_Projekt
         {
             InitializeComponent();
 
+
             loggedUser = LoggedUser.GetInstance();
             userId = loggedUser.Id;
             setShift = -1;
@@ -55,8 +56,8 @@ namespace Platformy_Projekt
                     FontFamily = new FontFamily("Yu Gothic UI Light"),
                     FontSize = 16,
                     FontWeight = FontWeights.Bold,
-                    Background = new SolidColorBrush(Color.FromRgb(49, 54, 63)),
-                    Foreground = new SolidColorBrush(Color.FromRgb(221, 221, 221)),
+                    Background = (SolidColorBrush)FindResource("SecondaryColorBrush"),
+                    Foreground = (SolidColorBrush)FindResource("TextColorLightBrush"),
                     BorderThickness = new Thickness(0),
                     TextAlignment = TextAlignment.Center,
                     VerticalContentAlignment = VerticalAlignment.Center,

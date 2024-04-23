@@ -100,6 +100,8 @@ namespace Platformy_Projekt
                     button.Content = grid;
                     button.Click += OpenMessage;
                     button.Background = MessageBackground();
+                    button.FontWeight = FontWeights.Bold;
+                    button.Foreground = (SolidColorBrush)FindResource("TextColorDarkBrush");
                     button.BorderThickness = new Thickness(0);
                     button.Cursor = Cursors.Hand;
                     button.FontFamily = new FontFamily("Yu Gothic UI Light");
@@ -176,10 +178,10 @@ namespace Platformy_Projekt
         private LinearGradientBrush MessageBackground()
         {
             GradientStop gradientStop1 = new GradientStop();
-            gradientStop1.Color = Color.FromRgb(200, 200, 200); // #222831
+            gradientStop1.Color = (Color)FindResource("BackgroundColorFade");
 
             GradientStop gradientStop2 = new GradientStop();
-            gradientStop2.Color = Color.FromRgb(238, 238, 238); // #31363F
+            gradientStop2.Color = (Color)FindResource("BackgroundColor");
             gradientStop2.Offset = 1;
 
             LinearGradientBrush linearGradientBrush = new LinearGradientBrush();

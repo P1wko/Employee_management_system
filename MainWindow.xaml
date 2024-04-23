@@ -21,14 +21,14 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid Background="#EEEEEE">
+    <Grid Background="{DynamicResource BackgroundColorBrush}">
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Background="#76ABAE">
+        <Grid Grid.Column="0" Background="{DynamicResource PrimaryColorBrush}">
             
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -51,7 +51,7 @@
             <Button x:Name="timerBtn" Content="TIMER" Grid.Row="5" Click="timerBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
             <Button x:Name="logoutBtn" Content="LOG OUT" Grid.Row="10" Click="logoutBtn_Click" IsEnabled="False" Style="{StaticResource MenuButtonStyle}"/>
         </Grid>
-        <ContentControl x:Name="contentGrid" Grid.Column="1" Background="#EEEEEE"/>
+        <ContentControl x:Name="contentGrid" Grid.Column="1" Background="{DynamicResource BackgroundColorBrush}"/>
 
 
         <Grid/>
