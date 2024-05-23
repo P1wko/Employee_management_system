@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,6 +22,10 @@ namespace Platformy_Projekt
     {
         LoggedUser loggedUser;
         private int userId;
+        private DataTable dt;
+
+        public delegate void OnTaskOpened(string title, string employee, string desc);
+        public event OnTaskOpened TaskOpened;
         public TasksControll()
         {
             InitializeComponent();
@@ -36,11 +41,11 @@ namespace Platformy_Projekt
             try
             {
 
-                string query = $"SELECT title, progress FROM tasks WHERE asignee = {userId};";
+                string query = $"SELECT title, body, progress FROM tasks WHERE asignee = {userId};";
                 MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                 command.ExecuteNonQuery();
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
-                DataTable dt = new DataTable("tasks");
+                dt = new DataTable("tasks");
                 dataAdapter.Fill(dt);
 
                 int counter1 = 0;
@@ -61,6 +66,7 @@ namespace Platformy_Projekt
                         Cursor = Cursors.Hand
                     };
                     task.PreviewMouseLeftButtonDown += DragTextbox;
+                    task.MouseDoubleClick += OpenTask;
 
                     task.Text = row.Field<string>("title");
                     if (row.Field<string>("progress") == "todo")
@@ -201,6 +207,23 @@ namespace Platformy_Projekt
         private void refreshBtnClick(object sender, RoutedEventArgs e)
         {
             refreshTasks();
+        }
+
+        private void OpenTask(object sender, RoutedEventArgs e)
+        {
+            TaskDetails taskDetails = new TaskDetails();
+            TaskOpened += taskDetails.DisplayTask;
+            
+            taskDetails.Show();
+            foreach (DataRow row in dt.Rows)
+            {
+                if(sender is TextBox text && text.Text == row["title"].ToString())
+                {
+                    string title = row["title"].ToString();
+                    string body = row["body"].ToString();
+                    TaskOpened.Invoke(title, $"{loggedUser.Name} {loggedUser.Surname}", body);
+                }
+            }
         }
 
         private void CreateTaskBtnClick(object sender, RoutedEventArgs e)

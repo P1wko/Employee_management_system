@@ -362,3 +362,5 @@ C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_managemen
 C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\AddUser.g.cs
 C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\AddTask.baml
 C:\Users\filip.dempc\OneDrive - Westernacher\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\AddUser.baml
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\TaskDetails.g.cs
+F:\Michal\Projekt\Employee_management_system\obj\Debug\net6.0-windows\TaskDetails.baml

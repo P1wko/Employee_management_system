@@ -1,0 +1,25 @@
+﻿<Window x:Class="Platformy_Projekt.TaskDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Platformy_Projekt"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        Title="TaskDetails" Height="450" Width="400">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="TaskDescription" Grid.Row="2" Margin="10,10,10,10"/>
+            <Label Content="Title: " HorizontalAlignment="Left" Margin="43,0,0,0" VerticalAlignment="Center"/>
+            <Label Content="Assigned to: " HorizontalAlignment="Left" Margin="23,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBlock x:Name="TitleTxtBlock" HorizontalAlignment="Left" Margin="157,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center"/>
+            <TextBlock x:Name="PersonTxtBlock" HorizontalAlignment="Left" Margin="157,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Grid.Row="1"/>
+        </Grid>
+
+    </Grid>
+</Window>
