@@ -94,13 +94,13 @@
 
 
 
-    <Color x:Key="PrimaryColor"><!--#76ABAE-->RED</Color>
-    <Color x:Key="SecondaryColor"><!--#31363F-->BLUE</Color>
-    <Color x:Key="SecondaryColorFade"><!--#222831-->GREEN</Color>
-    <Color x:Key="BackgroundColor"><!--#EEEEEE-->ORANGE</Color>
-    <Color x:Key="BackgroundColorFade"><!--#CCCCCC-->PINK</Color>
-    <Color x:Key="TextColorLight"><!--#EEEEEE-->YELLOW</Color>
-    <Color x:Key="TextColorDark"><!--#31363F-->PURPLE</Color>
+    <Color x:Key="PrimaryColor">#76ABAE</Color>
+    <Color x:Key="SecondaryColor">#31363F</Color>
+    <Color x:Key="SecondaryColorFade">#222831</Color>
+    <Color x:Key="BackgroundColor">#EEEEEE</Color>
+    <Color x:Key="BackgroundColorFade">#CCCCCC</Color>
+    <Color x:Key="TextColorLight">#EEEEEE</Color>
+    <Color x:Key="TextColorDark">#31363F</Color>
     
     
     

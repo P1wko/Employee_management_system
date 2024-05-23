@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformy_Projekt"
         mc:Ignorable="d"
-        Title="AddTask" Height="480" Width="800" MinHeight="480" MinWidth="600" Background="{StaticResource BackgroundColorBrush}">
+        Title="AddTask" Height="480" Width="800" MinHeight="480" MinWidth="600" Background="{DynamicResource BackgroundColorBrush}">
      
     <Window.Resources>
         <ResourceDictionary>
