@@ -29,7 +29,22 @@ namespace Platformy_Projekt
             TitleTxtBlock.Text = title;
             PersonTxtBlock.Text = employee;
             TaskDescription.Text = desc;
-            StatusTxtBlock.Text = status;
+            switch (status)
+            {
+                case "todo":
+                    StatusTxtBlock.Text = " To do";
+                    break;
+                case "inprogress":
+                    StatusTxtBlock.Text = "In Progress";
+                    break;
+                case "waiting":
+                    StatusTxtBlock.Text = "Waiting";
+                    break;
+                case "completed":
+                    StatusTxtBlock.Text = "Completed";
+                    break;
+            }
+            
         }
     }
 }

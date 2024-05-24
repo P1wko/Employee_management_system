@@ -1837,19 +1837,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mikob\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Github\\Employeee\\Employee_management_system\\Platformy Projekt.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\Platformy Projekt.csproj",
       "projectName": "Platformy Projekt",
-      "projectPath": "G:\\Github\\Employeee\\Employee_management_system\\Platformy Projekt.csproj",
-      "packagesPath": "C:\\Users\\mikob\\.nuget\\packages\\",
-      "outputPath": "G:\\Github\\Employeee\\Employee_management_system\\obj\\",
+      "projectPath": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\Platformy Projekt.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\admin\\Documents\\GitHub\\Employee_management_system\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mikob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1908,7 +1908,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

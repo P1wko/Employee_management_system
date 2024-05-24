@@ -430,3 +430,5 @@ G:\Github\Employeee\Employee_management_system\obj\Debug\net6.0-windows\refint\P
 G:\Github\Employeee\Employee_management_system\obj\Debug\net6.0-windows\Platformy Projekt.pdb
 G:\Github\Employeee\Employee_management_system\obj\Debug\net6.0-windows\Platformy Projekt.genruntimeconfig.cache
 G:\Github\Employeee\Employee_management_system\obj\Debug\net6.0-windows\ref\Platformy Projekt.dll
+C:\Users\admin\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\TaskDetails.g.cs
+C:\Users\admin\Documents\GitHub\Employee_management_system\obj\Debug\net6.0-windows\TaskDetails.baml

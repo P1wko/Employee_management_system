@@ -48,17 +48,18 @@ namespace Platformy_Projekt
                 Name.Text = dt.Rows[0][0].ToString();
                 Surname.Text = dt.Rows[0][1].ToString();
 
+                var permissionValue = dt.Rows[0]["permissions"].ToString();
                 foreach (ComboBoxItem item in Permissions.Items)
                 {
-                    if (item.Tag != null && item.Tag.ToString() == dt.Rows[0][2].ToString())
+                    if (item.Tag != null && item.Tag.ToString() == permissionValue)
                     {
-                        Permissions.SelectedItem = item.ToString();
+                        Permissions.SelectedItem = item;
                         break;
                     }
                 }
 
                 Email.Text = dt.Rows[0][6].ToString();
-                Permissions.Text = dt.Rows[0][2].ToString();
+                //Permissions.Text = dt.Rows[0][2].ToString();
                 Login.Text = dt.Rows[0][3].ToString();
                 Password.Password = dt.Rows[0][4].ToString();
                 passChanged = false;
