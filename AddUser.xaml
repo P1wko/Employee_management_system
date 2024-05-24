@@ -17,10 +17,11 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="143*"/>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="167*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -28,26 +29,26 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Grid.Column="1" x:Name="Name" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10,0,20,0" FontFamily="Yu Gothic UI Light"/>
-        <TextBox Grid.Row="1" Grid.Column="1" x:Name="Surname" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,0,20,0" FontFamily="Yu Gothic UI Light"/>
-        <TextBox Grid.Row="2" Grid.Column="1" x:Name="Login" HorizontalAlignment="Stretch" Margin="10,0,20,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Yu Gothic UI Light"/>
-        <ComboBox Grid.Row="0" Grid.Column="3" x:Name="Permissions" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,20,0" FontFamily="Yu Gothic UI Light">
-            <ComboBoxItem Content="Boss" Tag="1" />
-            <ComboBoxItem Content="Scheduler" Tag="2"/>
-            <ComboBoxItem Content="User" Tag="3" IsSelected="True"/>
+        <TextBox Grid.Column="1" x:Name="Name" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,0,20,0" FontFamily="Yu Gothic UI Light" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="Surname" TextWrapping="Wrap" VerticalAlignment="Center" Margin="10,0,20,0" FontFamily="Yu Gothic UI Light" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="Login" Margin="10,0,20,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Yu Gothic UI Light" Grid.ColumnSpan="2"/>
+        <ComboBox Grid.Column="4" x:Name="Permissions" VerticalAlignment="Center" Margin="10,0,20,0" FontFamily="Yu Gothic UI Light" SelectedValuePath="Tag">
+            <ComboBoxItem x:Name="Boss" Content="Boss" Tag="1" />
+            <ComboBoxItem x:Name="Scheduler" Content="Scheduler" Tag="2"/>
+            <ComboBoxItem x:Name="User" Content="User" Tag="3" IsSelected="True"/>
         </ComboBox>
-        <TextBox Grid.Row="1" Grid.Column="3" x:Name="Email" HorizontalAlignment="Stretch" Margin="10,0,20,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Yu Gothic UI Light"/>
-        <TextBox Grid.Row="2" Grid.Column="3" x:Name="Salary" HorizontalAlignment="Stretch" Margin="10,0,20,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Yu Gothic UI Light"/>
-        <Button Grid.Row="3" Grid.Column="3" Content="Confirm" Click="Confirm" HorizontalAlignment="Stretch" Margin="10,0,20,0" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
-        <PasswordBox Grid.Row="3" Grid.Column="1" x:Name="Password" HorizontalAlignment="Stretch" Margin="10,0,20,0" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="4" x:Name="Email" Margin="10,0,20,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Yu Gothic UI Light"/>
+        <TextBox Grid.Row="2" Grid.Column="4" x:Name="Salary" Margin="10,0,20,0" TextWrapping="Wrap" VerticalAlignment="Center" FontFamily="Yu Gothic UI Light"/>
+        <Button Grid.Row="3" Grid.Column="4" Content="Confirm" Click="Confirm" Margin="10,0,20,0" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
+        <PasswordBox Grid.Row="3" Grid.Column="1" x:Name="Password" Margin="10,0,20,0" VerticalAlignment="Center" Grid.ColumnSpan="2" PasswordChanged="PasswordChanger"/>
 
-        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Name" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Surname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Login" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Password" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Role" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="E-mail" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
-        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Salary" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Width="60" FontFamily="Yu Gothic UI Light"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Name" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="60" FontFamily="Yu Gothic UI Light" Margin="23,0,0,0"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Surname" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="60" FontFamily="Yu Gothic UI Light" Margin="23,0,0,0"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Login" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="60" FontFamily="Yu Gothic UI Light" Margin="23,0,0,0"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Password" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Width="60" FontFamily="Yu Gothic UI Light" Margin="23,0,0,0"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Role" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left" Width="60" FontFamily="Yu Gothic UI Light" Margin="23,0,0,0"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="E-mail" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left" Width="60" FontFamily="Yu Gothic UI Light" Margin="23,0,0,0"/>
+        <Label Foreground="{StaticResource TextColorDarkBrush}" Content="Salary" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Left" Width="60" FontFamily="Yu Gothic UI Light" Margin="23,0,0,0"/>
 
     </Grid>
 </Window>

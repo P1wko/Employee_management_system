@@ -21,10 +21,14 @@ namespace Platformy_Projekt
 {
     public partial class EmployeesControl : UserControl
     {
+
         LoggedUser loggedUser;
         private int userId;
         DatabaseData? databaseConn;
         string? connectionString;
+
+        //public delegate void OnEditClick(int sendId);
+        //public event OnEditClick EditWindowOpen;
         public EmployeesControl()
         {
             loggedUser = LoggedUser.GetInstance();
@@ -205,7 +209,10 @@ namespace Platformy_Projekt
             }
             else if(item!=null && item.Content == "Edit")
             {
-                MessageBox.Show("Edit user "+id);
+                AddUser addUser = new AddUser();
+                addUser.FetchUser(id.ToString());
+                addUser.Show();
+                //MessageBox.Show("Edit user "+id);
             }
             else if(item!=null && item.Content == "Delete")
             {

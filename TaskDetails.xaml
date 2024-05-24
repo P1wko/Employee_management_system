@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Title="TaskDetails"
-        d:DesignHeight="450" d:DesignWidth="800" d:Background="White">
+        d:DesignHeight="450" d:DesignWidth="800" Background="{DynamicResource BackgroundColorBrush}">
 
 
     <Window.Resources>
