@@ -14,6 +14,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Newtonsoft.Json;
+using System.IO;
+using System.Net;
+
 
 namespace Platformy_Projekt
 {
@@ -21,17 +25,60 @@ namespace Platformy_Projekt
     {
         public delegate void UserLoggeInHandler();
         public event UserLoggeInHandler UserLoggedIn;
+        private string RemLogin;
+        private string RemPassword;
+        private bool isRemembered;
         public LogInControl()
         {
             InitializeComponent();
+            rememberMe();
         }
 
+        private void rememberMe()
+        {
+            string jsonFile = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rememberMe.json");
+            try
+            {
+                string jsonContent = File.ReadAllText(jsonFile);
+                Credentials credentials = JsonConvert.DeserializeObject<Credentials>(jsonContent);
+
+                if(credentials.Remembered == 0)
+                {
+                    isRemembered = false;
+                }
+                else { isRemembered= true; }
+
+                if (isRemembered)
+                {
+                    RemLogin = credentials.Login;
+                    RemPassword = credentials.Password;
+                    login.Text = RemLogin;
+                    passwd.Password = "12345";
+                    rememberChck.IsChecked= true;
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                string lgn = login.Text;
-                string pswd = HashPassword.HashString(passwd.Password);
+                string lgn;
+                string pswd;
+                if (isRemembered)
+                {
+                    lgn = RemLogin;
+                    pswd = RemPassword;
+                }
+                else
+                {
+                    lgn = login.Text;
+                    pswd = HashPassword.HashString(passwd.Password);
+                }
                 string query = $"SELECT * FROM users WHERE login='{lgn}';";
                 MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                 command.ExecuteNonQuery();
@@ -51,15 +98,50 @@ namespace Platformy_Projekt
                     //passwd.Password = "";
 
                     MessageBox.Show("Zalogowano poprawnie");
+                    saveCreds(lgn, pswd);
                 }
                 else
                 {
                     MessageBox.Show("Błędne dane logowania");
                 }
+
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+        private void saveCreds(string login, string passwd)
+        {
+            string jsonFile = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rememberMe.json");
+            try
+            {
+                string jsonContent = File.ReadAllText(jsonFile);
+                Credentials credentials = JsonConvert.DeserializeObject<Credentials>(jsonContent);
+
+                if (rememberChck.IsChecked==true)
+                {
+                    credentials.Remembered = 1;
+                    credentials.Login = login;
+                    credentials.Password = passwd;
+                }
+                else
+                {
+                    credentials.Remembered = 0;
+                    credentials.Login = "";
+                    credentials.Password = "";
+                }
+
+                string updatedJsonContent = JsonConvert.SerializeObject(credentials);
+                File.WriteAllText(jsonFile, updatedJsonContent);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
     }

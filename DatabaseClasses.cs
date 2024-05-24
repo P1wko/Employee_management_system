@@ -11,6 +11,12 @@ using System.Security.Cryptography;
 
 namespace Platformy_Projekt
 {
+    public class Credentials
+    {
+        public int Remembered {  get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+    }
     public class DatabaseData
     {
         public string Address { get; set; }

@@ -29,20 +29,25 @@
                 <RowDefinition Height="15*"/>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="2*"/>
-                <RowDefinition Height="15*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="13*"/>
             </Grid.RowDefinitions>
             <Label Content="Login" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Label Content="Password" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Content="Remember me" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Grid>
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="15*"/>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="2*"/>
-                <RowDefinition Height="15*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="13*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="login" Grid.Row="1" VerticalAlignment="Center" Text="admin" TextWrapping="Wrap" FontFamily="Yu Gothic UI Light"/>
-            <PasswordBox x:Name="passwd" Grid.Row="2" VerticalAlignment="Center" Password="admin"/>
+            <TextBox x:Name="login" Grid.Row="1" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="Yu Gothic UI Light"/>
+            <PasswordBox x:Name="passwd" Grid.Row="2" VerticalAlignment="Center"/>
+            <CheckBox x:Name="rememberChck" Grid.Row="3" VerticalAlignment="Center"/>
+
         </Grid>
 
         <Button x:Name="loginBtn" Grid.Column="3" Content="Log in" Click="loginBtn_Click" Style="{StaticResource ButtonStyle}" Width="100" Height="40" FontSize="18"/>
