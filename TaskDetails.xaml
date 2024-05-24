@@ -6,19 +6,80 @@
         xmlns:local="clr-namespace:Platformy_Projekt"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="TaskDetails" Height="450" Width="400">
+        Title="TaskDetails"
+        d:DesignHeight="450" d:DesignWidth="800" d:Background="White">
+
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition Height="6*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="TaskDescription" Grid.Row="2" Margin="10,10,10,10"/>
-            <Label Content="Title: " HorizontalAlignment="Left" Margin="43,0,0,0" VerticalAlignment="Center"/>
-            <Label Content="Assigned to: " HorizontalAlignment="Left" Margin="23,0,0,0" Grid.Row="1" VerticalAlignment="Center"/>
-            <TextBlock x:Name="TitleTxtBlock" HorizontalAlignment="Left" Margin="157,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center"/>
-            <TextBlock x:Name="PersonTxtBlock" HorizontalAlignment="Left" Margin="157,0,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Grid.Row="1"/>
+            <Grid Grid.Row="0">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="{DynamicResource SecondaryColorFade}"/>
+                        <GradientStop Color="{DynamicResource SecondaryColor}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="23*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="TitleTxtBlock" Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="2"  HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="16" TextAlignment="Left" FontFamily="Yu Gothic UI Light"/>
+                <Label Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="1" Content="Title:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="{DynamicResource SecondaryColorFade}"/>
+                        <GradientStop Color="{DynamicResource SecondaryColor}" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="10*"/>
+                </Grid.ColumnDefinitions>
+                <Label Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="1" Content="Assigned to:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+                <TextBlock x:Name="PersonTxtBlock" Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="2"  HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="16" TextAlignment="Left" FontFamily="Yu Gothic UI Light"/>
+                <Label Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="3" Content="Status:" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="18" FontFamily="Yu Gothic UI Light"/>
+                <TextBlock x:Name="StatusTxtBlock" Foreground="{DynamicResource TextColorLightBrush}" Grid.Column="4"  HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Center"  FontSize="16" TextAlignment="Left" FontFamily="Yu Gothic UI Light"/>
+            </Grid>
+            <Grid Grid.Row="2" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="1" Grid.Row="1" x:Name="TaskDescription" HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Stretch"  TextAlignment="Justify" FontFamily="Yu Gothic UI Light"/>
+            </Grid>
+
+
+
         </Grid>
 
     </Grid>

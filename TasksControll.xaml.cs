@@ -24,7 +24,7 @@ namespace Platformy_Projekt
         private int userId;
         private DataTable dt;
 
-        public delegate void OnTaskOpened(string title, string employee, string desc);
+        public delegate void OnTaskOpened(string title, string employee, string desc, string status);
         public event OnTaskOpened TaskOpened;
         public TasksControll()
         {
@@ -221,7 +221,8 @@ namespace Platformy_Projekt
                 {
                     string title = row["title"].ToString();
                     string body = row["body"].ToString();
-                    TaskOpened.Invoke(title, $"{loggedUser.Name} {loggedUser.Surname}", body);
+                    string progress = row["progress"].ToString();
+                    TaskOpened.Invoke(title, $"{loggedUser.Name} {loggedUser.Surname}", body, progress);
                 }
             }
         }

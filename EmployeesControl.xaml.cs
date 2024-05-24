@@ -201,7 +201,7 @@ namespace Platformy_Projekt
 
             if(item!=null && item.Content=="Send Message")
             {
-                MessageBox.Show("Send to "+id);
+                sendMsgClick(id);
             }
             else if(item!=null && item.Content == "Edit")
             {
@@ -242,6 +242,23 @@ namespace Platformy_Projekt
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void sendMsgClick(int id) {
+            string query = $"SELECT name, surname FROM users WHERE id = {id};";
+            MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
+
+            command.ExecuteNonQuery();
+
+            MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
+            DataTable dt = new DataTable("users");
+            dataAdapter.Fill(dt);
+
+            string nameAndSurname = dt.Rows[0][0]+" "+ dt.Rows[0][1];
+
+            SendMessage sendMessage = new SendMessage();
+            sendMessage.UsersList.SelectedValue = nameAndSurname;
+            sendMessage.Show();
         }
 
 

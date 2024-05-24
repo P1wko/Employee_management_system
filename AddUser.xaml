@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Platformy_Projekt"
         mc:Ignorable="d"
-        Title="AddUser" Background="{StaticResource BackgroundColorBrush}" MaxHeight="300" MaxWidth="500" MinHeight="300" MinWidth="500">
+        Title="AddUser" Background="{DynamicResource BackgroundColorBrush}" MaxHeight="300" MaxWidth="500" MinHeight="300" MinWidth="500">
 
     <Window.Resources>
         <ResourceDictionary>

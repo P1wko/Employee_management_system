@@ -24,11 +24,12 @@ namespace Platformy_Projekt
             InitializeComponent();
         }
 
-        public void DisplayTask(string title, string employee, string desc)
+        public void DisplayTask(string title, string employee, string desc, string status)
         {
             TitleTxtBlock.Text = title;
             PersonTxtBlock.Text = employee;
             TaskDescription.Text = desc;
+            StatusTxtBlock.Text = status;
         }
     }
 }
