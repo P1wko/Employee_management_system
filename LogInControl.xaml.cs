@@ -28,13 +28,14 @@ namespace Platformy_Projekt
         private string RemLogin;
         private string RemPassword;
         private bool isRemembered;
+        private bool passwdChanged=false;
         public LogInControl()
         {
             InitializeComponent();
             rememberMe();
         }
 
-        private void rememberMe()
+        public void rememberMe()
         {
             string jsonFile = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "rememberMe.json");
             try
@@ -53,7 +54,8 @@ namespace Platformy_Projekt
                     RemLogin = credentials.Login;
                     RemPassword = credentials.Password;
                     login.Text = RemLogin;
-                    passwd.Password = "12345";
+                    passwd.Password = "     ";
+                    passwdChanged = false;
                     rememberChck.IsChecked= true;
                 }
 
@@ -67,16 +69,14 @@ namespace Platformy_Projekt
         {
             try
             {
-                string lgn;
+                string lgn = login.Text;
                 string pswd;
-                if (isRemembered)
+                if (isRemembered && !passwdChanged)
                 {
-                    lgn = RemLogin;
                     pswd = RemPassword;
                 }
                 else
                 {
-                    lgn = login.Text;
                     pswd = HashPassword.HashString(passwd.Password);
                 }
                 string query = $"SELECT * FROM users WHERE login='{lgn}';";
@@ -102,7 +102,7 @@ namespace Platformy_Projekt
                 }
                 else
                 {
-                    MessageBox.Show("Błędne dane logowania");
+                    MessageBox.Show("Błędne dane logowania"+lgn+pswd);
                 }
 
 
@@ -143,6 +143,11 @@ namespace Platformy_Projekt
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        private void OnPasswordChange(object sender, System.EventArgs e)
+        {
+            passwdChanged = true;
         }
     }
 }

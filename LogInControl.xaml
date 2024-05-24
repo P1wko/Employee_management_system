@@ -45,8 +45,8 @@
                 <RowDefinition Height="13*"/>
             </Grid.RowDefinitions>
             <TextBox x:Name="login" Grid.Row="1" VerticalAlignment="Center" TextWrapping="Wrap" FontFamily="Yu Gothic UI Light"/>
-            <PasswordBox x:Name="passwd" Grid.Row="2" VerticalAlignment="Center"/>
-            <CheckBox x:Name="rememberChck" Grid.Row="3" VerticalAlignment="Center"/>
+            <PasswordBox x:Name="passwd" Grid.Row="2" VerticalAlignment="Center" PasswordChanged="OnPasswordChange"/>
+            <CheckBox x:Name="rememberChck" Grid.Row="3" VerticalAlignment="Center" IsChecked="False"/>
 
         </Grid>
 

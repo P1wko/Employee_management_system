@@ -230,7 +230,8 @@ namespace Platformy_Projekt
                     $"DELETE FROM users WHERE `users`.`id` = {id}; " +
                     $"DELETE FROM messages WHERE `messages`.`addresseeId` = {id}; " +
                     $"DELETE FROM tasks WHERE `tasks`.`asignee` = {id}; " +
-                    $"DELETE FROM schedule WHERE `schedule`.`workerId` = {id};";
+                    $"DELETE FROM schedule WHERE `schedule`.`workerId` = {id};" +
+                    $"DELETE FROM messages WHERE `messages`.`senderId` = {id}; ";
 
                 MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                 command.ExecuteNonQuery();
