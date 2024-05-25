@@ -17,7 +17,7 @@ namespace Platformy_Projekt
     /// <summary>
     /// Logika interakcji dla klasy TaskDetails.xaml
     /// </summary>
-    public partial class TaskDetails : Window
+    public partial class TaskDetails : UserControl
     {
         public TaskDetails()
         {

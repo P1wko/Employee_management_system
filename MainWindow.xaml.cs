@@ -33,6 +33,7 @@ namespace Platformy_Projekt
         private EmployeesControl employeesControl;
         private TasksControll tasksControll;
         private Message messWind;
+        private TaskDetails task;
 
         public MainWindow()
         {
@@ -62,6 +63,7 @@ namespace Platformy_Projekt
             scheduleControl = new ScheduleControl();
             employeesControl = new EmployeesControl();
             tasksControll = new TasksControll();
+            tasksControll.TaskToOpen += ChangeTasksControlWindow;
 
             contentGrid.Content = null;
         }
@@ -142,10 +144,25 @@ namespace Platformy_Projekt
             contentGrid.Content = messWind;
         }
 
+        private void ChangeTasksControlWindow()
+        {
+            task = new TaskDetails();
+            task.DelTaskBtn.Click += GetBackToTasks;
+            task.GoBackBtn.Click += GetBackToTasks;
+            tasksControll.TaskOpened += task.DisplayTask;
+            task.DelTaskBtn.Click += tasksControll.DeleteTask;
+            contentGrid.Content = task;
+        }
+
         private void GetBackToMessages()
         {
             contentGrid.Content = messagesControl;
             messagesControl.MessageOpen -= messWind.Fetchmessage;
+        }
+
+        private void GetBackToTasks(object sender, RoutedEventArgs e)
+        {
+            contentGrid.Content = tasksControll;
         }
 
         private void CheckPerms()

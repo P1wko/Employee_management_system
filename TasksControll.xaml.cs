@@ -22,7 +22,12 @@ namespace Platformy_Projekt
     {
         LoggedUser loggedUser;
         private int userId;
+        private int idToDel;
         private DataTable dt;
+
+
+        public delegate void TaskOpening();
+        public event TaskOpening TaskToOpen;
 
         public delegate void OnTaskOpened(string title, string employee, string desc, string status);
         public event OnTaskOpened TaskOpened;
@@ -41,7 +46,7 @@ namespace Platformy_Projekt
             try
             {
 
-                string query = $"SELECT title, body, progress FROM tasks WHERE asignee = {userId};";
+                string query = $"SELECT id, title, body, progress FROM tasks WHERE asignee = {userId};";
                 MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
                 command.ExecuteNonQuery();
                 MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
@@ -211,21 +216,30 @@ namespace Platformy_Projekt
 
         private void OpenTask(object sender, RoutedEventArgs e)
         {
-            TaskDetails taskDetails = new TaskDetails();
-            TaskOpened += taskDetails.DisplayTask;
-            
-            taskDetails.Show();
+            idToDel = 0;
+
             foreach (DataRow row in dt.Rows)
             {
                 if(sender is TextBox text && text.Text == row["title"].ToString())
                 {
+                    idToDel = (int)row["id"];
                     string title = row["title"].ToString();
                     string body = row["body"].ToString();
                     string progress = row["progress"].ToString();
+                    TaskToOpen.Invoke();
                     TaskOpened.Invoke(title, $"{loggedUser.Name} {loggedUser.Surname}", body, progress);
                 }
             }
+
         }
+        public void DeleteTask(object sender, RoutedEventArgs e)
+        {
+            string query = $"DELETE FROM tasks WHERE id = {idToDel};";
+            MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
+            command.ExecuteNonQuery();
+        }
+
+        
 
         private void CreateTaskBtnClick(object sender, RoutedEventArgs e)
         {
