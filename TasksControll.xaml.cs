@@ -237,6 +237,7 @@ namespace Platformy_Projekt
             string query = $"DELETE FROM tasks WHERE id = {idToDel};";
             MySqlCommand command = new MySqlCommand(query, DatabaseConnection.Connection);
             command.ExecuteNonQuery();
+            refreshTasks();
         }
 
         
